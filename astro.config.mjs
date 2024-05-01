@@ -9,6 +9,7 @@ export default defineConfig({
   site: "https://termotronic.com",
   integrations: [tailwind(), mdx(), sitemap(), react()],
   vite: {
+    assetsInclude: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.mp4'],
     resolve: {
       alias: {
         '@lib': '/src/lib',
