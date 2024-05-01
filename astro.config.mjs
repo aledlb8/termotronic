@@ -5,8 +5,20 @@ import sitemap from "@astrojs/sitemap";
 
 import react from "@astrojs/react";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://termotronic.com",
-  integrations: [tailwind(), mdx(), sitemap(), react()]
+  integrations: [tailwind(), mdx(), sitemap(), react()],
+  vite: {
+    resolve: {
+      alias: {
+        '@lib': '/src/lib',
+        '@utils': '/src/utils',
+        '@components': '/src/components',
+        '@layouts': '/src/layouts',
+        '@assets': '/src/assets',
+        '@pages': '/src/pages',
+        '@content': '/src/content'
+      }
+    }
+  }
 });
