@@ -1,0 +1,87 @@
+---
+import Container from "@components/container.astro";
+import Link from "@components/ui/link.astro";
+import heroImage from "assets/logoSlogan.png";
+import Dropdown from "./dropdown.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "astro:assets";
+
+const menuitems = [
+  {
+    title: "Productos",
+    path: "#",
+    children: [
+      { title: "Termotronic", path: "/products/termotronic" },
+      { title: "CBX", path: "/products/cbx" },
+      { title: "Kit de Instalacion", path: "/products/kit" },
+    ],
+  },
+  {
+    title: "Precios",
+    path: "/pricing",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Contactanos",
+    path: "/contact",
+  },
+];
+---
+<!-- lg:flex-row -->
+<Container
+  class="container bg-gray-100 rounded-3xl pt-4">
+  <header 
+    class="flex flex-col lg:flex-row justify-between items-center py-4">
+    <Astronav>
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a href="/" class="text-lg lg:ml-20">
+          <!-- <span class="font-bold text-slate-800">Termotronic</span> -->
+          <Picture
+            src={heroImage}
+            alt="Termotromic"
+            widths={[100, 200, 300]}
+            sizes="(max-width: 800px) 100vw, 300px"
+            loading="eager"
+            format="avif"
+            style={{ width: "100%", maxWidth: "200px", marginBottom:"10px" }}
+          />
+        </a>
+
+        <div class="block lg:hidden">
+          <MenuIcon class="w-4 h-4 text-black font-bold" />
+        </div>
+      </div>
+      <MenuItems class="hidden w-full lg:w-auto lg:flex lg:mt-0">
+        <ul class="flex flex-col lg:flex-row lg:gap-3 lg:mr-20">
+          {
+            menuitems.map((item, index) => (
+              <>
+                {item.children && (
+                  <Dropdown
+                    title={item.title}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
+                )}
+
+                {!item.children && (
+                  <li>
+                    <a
+                      href={item.path}
+                      class="flex lg:px-3 py-2 items-center text-black font-bold">
+                      <span> {item.title}</span>
+                    </a>
+                  </li>
+                )}
+              </>
+            ))
+          }
+        </ul>
+      </MenuItems>
+    </Astronav>
+    <!-- <div class="hidden lg:flex items-center gap-4"></div> -->
+  </header>
+</Container>

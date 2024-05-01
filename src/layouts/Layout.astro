@@ -1,0 +1,61 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.jsx";
+import "@fontsource-variable/inter/index.css";
+
+export interface Props {
+  title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.jpg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      title={title}
+      description="Termotronic - Calentador Eléctrico de Agua sin Tanque."
+      canonical={canonicalURL}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Termotronic - Calentador Eléctrico de Agua sin Tanque.`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Termotronic Homepage Screenshot",
+        },
+      }}
+    />
+  </head>
+  <body>
+    <Navbar client:load />
+    <slot />
+    <Footer />
+    <style is:global>
+      /* Improve Page speed */
+      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+      .body {
+        background-color: rgb(224, 228, 231);
+      }
+      img {
+        content-visibility: auto;
+      }
+    </style>
+  </body>
+</html>

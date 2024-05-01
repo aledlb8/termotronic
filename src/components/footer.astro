@@ -1,0 +1,48 @@
+---
+import { footerLinks } from "@content/config";
+import { Picture } from "astro:assets";
+import heroImage from "assets/logoBlanco.png";
+import Logos from "./logos.astro";
+---
+
+<footer
+  class="border-t border-gray-700 mt-20 text-center bg-zinc-950 text-white">
+  <div
+    class="container grid grid-cols-1 gap-6 py-14 sm:grid-cols-2 md:grid-cols-5">
+    {
+      footerLinks.map((section) => (
+        <div>
+          <span class="text-lg font-bold">{section.title}</span>
+          <ul class="mt-4 list-inside space-y-3">
+            {section.items?.map((link) => (
+              <li>
+                <a href={link.href} class="text-sm hover:text-gray-300">
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+    <div class="flex flex-col items-center md:col-span-2">
+      <Picture
+        class={"pt-4"}
+        src={heroImage}
+        alt="Termotronic"
+        widths={[100, 200, 300]}
+        sizes="(max-width: 800px) 100vw, 300px"
+        loading="eager"
+        format="avif"
+        style={{ width: "100%", maxWidth: "200px" }}
+      />
+      <Logos />
+    </div>
+  </div>
+  <div class="border-t bg-zinc-950">
+    <p class="text-center text-sm text-white py-6">
+      Copyright © 2005 - {new Date().getFullYear()} Termotronic.<br>Todos los derechos
+      reservados.
+    </p>
+  </div>
+</footer>
