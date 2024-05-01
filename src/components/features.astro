@@ -1,37 +1,50 @@
 ---
 // @ts-ignore
+import Features from "./features";
 import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-briefcase",
+    title: "Ecológico",
+    description:
+      "Comprometidos con el planeta diseñamos y fabricamos con materiales 100% reciclables. Cuida el medio ambiente mientras ahorras energía con nuestro diseño ecológico.",
+    icon: "mdi:plant-outline",
+    color: "green",
   },
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-window-alt",
+    title: "Agua caliente sin límite",
+    description:
+      "Disfrute de toda el agua caliente que necesite, con Termotronic nunca faltará agua caliente.",
+    icon: "mdi:water",
+    color: "blue",
   },
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-data",
+    title: "Ahorro de espacio",
+    description:
+      "Los Termotronic no tienen tanque, esto se traduce en un calentador de agua de reducido tamaño.",
+    icon: "ic:round-space-dashboard",
+    color: "gray",
   },
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-bot",
+    title: "Ahorro de electricidad",
+    description:
+      "Termotronic solo calienta el agua que usted va a utilizar, permaneciendo apagado hasta que se abra el agua caliente.",
+    icon: "mdi:electricity",
+    color: "cyan",
   },
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-file-find",
+    title: "Agua caliente instantánea",
+    description:
+      "Al regresar el agua con Termotronic simplemente se abre una llave y se disfruta de agua caliente sin tener que esperar.",
+    icon: "uil:fast-mail",
+    color: "red",
   },
   {
-    title: "Lorem ipsum",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore alias nulla eligendi at non, sapiente ut iure expedita velit distinctio.",
-    icon: "bx:bxs-user",
+    title: "Duradero y confiable",
+    description:
+      "Construido para durar y con calidad que puedes sentir en cada baño. Con los mejores materiales y el mejor diseño aseguramos años de agua caliente sin preocupaciones.",
+    icon: "mdi:crown",
+    color: "yellow",
   },
 ];
 ---
@@ -41,19 +54,21 @@ const features = [
     Todo lo que necesitas saber de un termotronic.
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Fabricado con los componentes de la mas alta calidad existentes en el
-    mercado, siguiendo los mas estrictos controles de calidad en cada una de sus
-    cuatro etapas de ensamblaje.
+    Fabricamos con los componentes de la más alta calidad existentes en el
+    mercado y seguimos rigurosos controles de calidad en cada etapa de la
+    producción.
   </p>
 </div>
 
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 max-w-screen-2xl mx-auto">
-  {
+<!-- grid sm:grid-cols-2 md:grid-cols-3 mt-16 max-w-screen-2xl mx-auto -->
+<div
+  class="mt-16 max-w-screen-2xl mx-auto">
+  <Features client:load />
+  <!-- {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        {/* bg-gray-100 rounded-3xl p-4 md:py-10 mt-10  */}
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+        <div class={`mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0`}>
+          <Icon class={`text-${item.color}-300`} name={item.icon} />
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
@@ -61,5 +76,5 @@ const features = [
         </div>
       </div>
     ))
-  }
+  } -->
 </div>

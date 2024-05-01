@@ -17,30 +17,26 @@ const blogCollection = defineCollection({
 
 export const footerLinks = [
   {
-    title: "Compañia",
+    title: "Quienes Somos",
     items: [
-      { title: "Acerca", href: "#" },
-      { title: "Socios", href: "#" },
-      { title: "Trabajos", href: "#" },
-      { title: "FAQ", href: "#" },
+      { title: "Acerca", href: "/nosotros" },
+      { title: "Contactos", href: "/contact" },
     ],
   },
   {
     title: "Producto",
     items: [
-      { title: "Seguirdad", href: "#" },
-      { title: "Distribuidores", href: "#" },
-      { title: "Fabricacion", href: "#" },
-      { title: "Especificaciones", href: "#" },
+      { title: "Termotronic", href: "/products/termotronic" },
+      { title: "CBX", href: "/products/cbx" },
+      { title: "Informacion", href: "/informacion" },
     ],
   },
   {
     title: "Blog",
     items: [
-      { title: "Instalacion Termotronic", href: "#" },
-      { title: "Instalacion CBX", href: "#" },
-      { title: "Utilizacion del KIT", href: "#" },
-      { title: "Experiencia", href: "#" },
+      { title: "Instalando un Termotronic", href: "/blog/instalando-un-termotronic" },
+      { title: "Uso e instalación de kit de plomería", href: "/blog/uso-kit-plomeria" },
+      { title: "Experiencia", href: "/blog/experiencia" },
     ],
   },
 ];

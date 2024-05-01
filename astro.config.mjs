@@ -6,6 +6,12 @@ import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 
 export default defineConfig({
+  server: {
+    port: 80
+  },
+  image: {
+    domains: ["termotronic.com"]
+  },
   site: "https://termotronic.com",
   integrations: [tailwind(), mdx(), sitemap(), react()],
   vite: {

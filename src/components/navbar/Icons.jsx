@@ -1,4 +1,4 @@
-export const ChevronDown = ({fill, size, height, width, ...props}) => {
+export const ChevronDown = ({ fill, size, height, width, ...props }) => {
   return (
     <svg
       fill="none"
@@ -6,8 +6,7 @@ export const ChevronDown = ({fill, size, height, width, ...props}) => {
       viewBox="0 0 24 24"
       width={size || width || 24}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="m19.92 8.95-6.52 6.52c-.77.77-2.03.77-2.8 0L4.08 8.95"
         stroke={fill}
@@ -20,7 +19,7 @@ export const ChevronDown = ({fill, size, height, width, ...props}) => {
   );
 };
 
-export const Lock = ({fill, size, height, width, ...props}) => {
+export const Lock = ({ fill, size, height, width, ...props }) => {
   const color = fill;
 
   return (
@@ -29,8 +28,7 @@ export const Lock = ({fill, size, height, width, ...props}) => {
       viewBox="0 0 24 24"
       width={size || width || 24}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <g transform="translate(3.5 2)">
         <path
           d="M9.121,6.653V4.5A4.561,4.561,0,0,0,0,4.484V6.653"
@@ -67,23 +65,21 @@ export const Lock = ({fill, size, height, width, ...props}) => {
   );
 };
 
-export const Activity = ({fill, size, height, width, ...props}) => {
+export const Activity = ({ fill, size, height, width, ...props }) => {
   return (
     <svg
       height={size || height || 24}
       viewBox="0 0 24 24"
       width={size || width || 24}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <g
         fill="none"
         stroke={fill}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit={10}
-        strokeWidth={1.5}
-      >
+        strokeWidth={1.5}>
         <path d="M6.918 14.854l2.993-3.889 3.414 2.68 2.929-3.78" />
         <path d="M19.668 2.35a1.922 1.922 0 11-1.922 1.922 1.921 1.921 0 011.922-1.922z" />
         <path d="M20.756 9.269a20.809 20.809 0 01.194 3.034c0 6.938-2.312 9.25-9.25 9.25s-9.25-2.312-9.25-9.25 2.313-9.25 9.25-9.25a20.931 20.931 0 012.983.187" />
@@ -106,8 +102,7 @@ export const Flash = ({
       viewBox="0 0 24 24"
       width={size || width}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="M6.09 13.28h3.09v7.2c0 1.68.91 2.02 2.02.76l7.57-8.6c.93-1.05.54-1.92-.87-1.92h-3.09v-7.2c0-1.68-.91-2.02-2.02-.76l-7.57 8.6c-.92 1.06-.53 1.92.87 1.92Z"
         stroke={fill}
@@ -134,8 +129,7 @@ export const Server = ({
       viewBox="0 0 24 24"
       width={size || width}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="M19.32 10H4.69c-1.48 0-2.68-1.21-2.68-2.68V4.69c0-1.48 1.21-2.68 2.68-2.68h14.63C20.8 2.01 22 3.22 22 4.69v2.63C22 8.79 20.79 10 19.32 10ZM19.32 22H4.69c-1.48 0-2.68-1.21-2.68-2.68v-2.63c0-1.48 1.21-2.68 2.68-2.68h14.63c1.48 0 2.68 1.21 2.68 2.68v2.63c0 1.47-1.21 2.68-2.68 2.68ZM6 5v2M10 5v2M6 17v2M10 17v2M14 6h4M14 18h4"
         stroke={fill}
@@ -161,8 +155,7 @@ export const TagUser = ({
       viewBox="0 0 24 24"
       width={size || width}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="M18 18.86h-.76c-.8 0-1.56.31-2.12.87l-1.71 1.69c-.78.77-2.05.77-2.83 0l-1.71-1.69c-.56-.56-1.33-.87-2.12-.87H6c-1.66 0-3-1.33-3-2.97V4.98c0-1.64 1.34-2.97 3-2.97h12c1.66 0 3 1.33 3 2.97v10.91c0 1.63-1.34 2.97-3 2.97Z"
         stroke={fill}
@@ -182,7 +175,6 @@ export const TagUser = ({
   );
 };
 
-
 export const Scale = ({
   fill = "currentColor",
   size,
@@ -197,8 +189,7 @@ export const Scale = ({
       viewBox="0 0 24 24"
       width={size || width}
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <path
         d="M9 22h6c5 0 7-2 7-7V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7ZM18 6 6 18"
         stroke={fill}
@@ -218,35 +209,34 @@ export const Scale = ({
 };
 
 export const SearchIcon = ({
-    size = 24,
-    strokeWidth = 1.5,
-    width,
-    height,
-    ...props
-  }) => (
-    <svg
-      aria-hidden="true"
-      fill="none"
-      focusable="false"
-      height={height || size}
-      role="presentation"
-      viewBox="0 0 24 24"
-      width={width || size}
-      {...props}
-    >
-      <path
-        d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d="M22 22L20 20"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={strokeWidth}
-      />
-    </svg>
-  );
+  size = 24,
+  strokeWidth = 1.5,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    aria-hidden="true"
+    fill="none"
+    focusable="false"
+    height={height || size}
+    role="presentation"
+    viewBox="0 0 24 24"
+    width={width || size}
+    {...props}>
+    <path
+      d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={strokeWidth}
+    />
+    <path
+      d="M22 22L20 20"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={strokeWidth}
+    />
+  </svg>
+);
