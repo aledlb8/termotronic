@@ -22,7 +22,6 @@ import {
   Server,
   TagUser,
   Scale,
-  SearchIcon,
 } from "./Icons.jsx";
 
 export default function App() {
@@ -53,7 +52,7 @@ export default function App() {
           <a href="/">
             <img
               src={
-                "https://media.discordapp.net/attachments/1145915543346479255/1235002378084941905/logoSlogan.png?ex=6632c918&is=66317798&hm=bd481d9369a135556c443d0082607c38affee272ef75e6182665e71d8f834fd8&=&format=webp&quality=lossless"
+                "logoSlogan.png"
               }
               alt="Termotronic"
               width={200}
@@ -67,7 +66,7 @@ export default function App() {
           <a href="/">
             <img
               src={
-                "https://media.discordapp.net/attachments/1145915543346479255/1235002378084941905/logoSlogan.png?ex=6632c918&is=66317798&hm=bd481d9369a135556c443d0082607c38affee272ef75e6182665e71d8f834fd8&=&format=webp&quality=lossless"
+                "logoSlogan.png"
               }
               alt="Termotronic"
               width={200}
