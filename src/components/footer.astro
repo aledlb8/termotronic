@@ -1,7 +1,5 @@
 ---
 import { footerLinks } from "@content/config";
-import { Picture } from "astro:assets";
-import heroImage from "../assets/logoBlanco.png";
 import Logos from "./logos.astro";
 ---
 
@@ -26,17 +24,7 @@ import Logos from "./logos.astro";
       ))
     }
     <div class="flex flex-col items-center md:col-span-2">
-      <!-- <Picture
-        class={"pt-4"}
-        src={"logoBlanco.png"}
-        alt="Termotronic"
-        widths={[100, 200, 300]}
-        sizes="(max-width: 800px) 100vw, 300px"
-        loading="eager"
-        format="avif"
-        style={{ width: "100%", maxWidth: "200px" }}
-      /> -->
-      <img src="logoBlanco.png" width="100" />
+      <img src="images/logoBlanco.png" width={200} />
       <Logos />
     </div>
   </div>

@@ -52,7 +52,7 @@ export default function App() {
           <a href="/">
             <img
               src={
-                "logoSlogan.png"
+                "images/logoSlogan.png"
               }
               alt="Termotronic"
               width={200}
@@ -66,7 +66,7 @@ export default function App() {
           <a href="/">
             <img
               src={
-                "logoSlogan.png"
+                "images/logoSlogan.png"
               }
               alt="Termotronic"
               width={200}

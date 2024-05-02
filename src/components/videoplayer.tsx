@@ -60,13 +60,13 @@ const VideoPlayer = () => {
                         onClick={(e) => e.stopPropagation()}
                         style={{ maxHeight: '70vh', width: 'auto' }}
                     >
-                        <source src="/video.mp4" type="video/mp4" />
+                        <source src="/videos/video.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
             ) : (
                 <img
-                    src="/video.gif"
+                    src="/videos/video.gif"
                     className='rounded-xl'
                     style={{ width: '100%', cursor: 'pointer' }}
                     alt="Click to play video"

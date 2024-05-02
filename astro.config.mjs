@@ -22,7 +22,6 @@ export default defineConfig({
         '@utils': '/src/utils',
         '@components': '/src/components',
         '@layouts': '/src/layouts',
-        '@assets': '/src/assets',
         '@pages': '/src/pages',
         '@content': '/src/content'
       }
