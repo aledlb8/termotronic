@@ -28,7 +28,7 @@ export const footerLinks = [
     items: [
       { title: "Termotronic", href: "/products/termotronic" },
       { title: "CBX", href: "/products/cbx" },
-      { title: "Informacion", href: "/informacion" },
+      { title: "Información", href: "/información" },
     ],
   },
   {

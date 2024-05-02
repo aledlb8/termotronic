@@ -18,7 +18,7 @@ export default function Features() {
 
   return (
     <div className="max-w-[1500px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <Card className="col-span-12 sm:col-span-4 h-[300px] hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Ecológico
@@ -33,12 +33,12 @@ export default function Features() {
           <Image
             removeWrapper
             alt="ecology"
-            className="z-0 w-full h-full object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full object-cover blur"
             src="https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>
       </Card>
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <Card className="col-span-12 sm:col-span-4 h-[300px] hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-black/60 uppercase font-bold">
             Agua caliente sin límite
@@ -52,12 +52,12 @@ export default function Features() {
           <Image
             removeWrapper
             alt="water"
-            className="z-0 w-full h-full object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full object-cover blur"
             src="https://images.pexels.com/photos/161502/shower-shower-head-water-drop-of-water-161502.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>
       </Card>
-      <Card className="col-span-12 sm:col-span-4 h-[300px]">
+      <Card className="col-span-12 sm:col-span-4 h-[300px] hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Ahorro de espacio
@@ -71,14 +71,14 @@ export default function Features() {
           <Image
             removeWrapper
             alt="space"
-            className="z-0 w-full h-full object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full object-cover blur"
             src="https://images.pexels.com/photos/334979/pexels-photo-334979.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>
       </Card>
       <Card
         isFooterBlurred
-        className="w-full h-[300px] col-span-12 sm:col-span-4">
+        className="w-full h-[300px] col-span-12 sm:col-span-4 hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Ahorro de electricidad
@@ -92,14 +92,14 @@ export default function Features() {
           <Image
             removeWrapper
             alt="electricity"
-            className="z-0 w-full h-full scale-125 -translate-y-6 object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full scale-125 -translate-y-6 object-cover blur"
             src="https://images.pexels.com/photos/401107/pexels-photo-401107.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>
       </Card>
       <Card
         isFooterBlurred
-        className="w-full h-[300px] col-span-12 sm:col-span-4">
+        className="w-full h-[300px] col-span-12 sm:col-span-4 hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
           <p className="text-tiny text-white/60 uppercase font-bold">
             Agua caliente instantánea
@@ -113,14 +113,14 @@ export default function Features() {
           <Image
             removeWrapper
             alt="water"
-            className="z-0 w-full h-full object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full object-cover blur"
             src="https://images.pexels.com/photos/612341/pexels-photo-612341.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>
       </Card>
       <Card
         isFooterBlurred
-        className="w-full h-[300px] col-span-12 sm:col-span-4">
+        className="w-full h-[300px] col-span-12 sm:col-span-4 hover:-translate-y-1">
         <CardHeader className="absolute z-10 top-1 flex-col items-start">
           <p className="text-tiny text-black/60 uppercase font-bold">
             Duradero y confiable
@@ -135,7 +135,7 @@ export default function Features() {
           <Image
             removeWrapper
             alt="durable"
-            className="z-0 w-full h-full object-cover blur hover:animate-appearance-in"
+            className="z-0 w-full h-full object-cover blur"
             src="https://images.pexels.com/photos/712111/pexels-photo-712111.jpeg?auto=compress&cs=tinysrgb&w=600"
           />
         </a>

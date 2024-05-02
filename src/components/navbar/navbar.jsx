@@ -111,7 +111,7 @@ export default function App() {
         </Dropdown>
         <NavbarItem>
           <Link className="hover:text-red-400" color="foreground" href="/information">
-            Informacion
+            Información
           </Link>
         </NavbarItem>
         <NavbarItem>
@@ -166,7 +166,7 @@ export default function App() {
         </Dropdown>
         <NavbarMenuItem>
           <Link className="hover:text-red-400" color="foreground" href="/information">
-            Informacion
+            Información
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>

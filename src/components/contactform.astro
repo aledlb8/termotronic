@@ -8,7 +8,11 @@ import Button from "./ui/button.astro";
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="b58efb7f-3697-4703-a4a2-0090ff0e095f" />
+  <input
+    type="hidden"
+    name="access_key"
+    value="b58efb7f-3697-4703-a4a2-0090ff0e095f"
+  />
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
@@ -19,7 +23,7 @@ import Button from "./ui/button.astro";
       name="name"
     />
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please provide your full name.
+      Por favor indique su nombre completo.
     </div>
   </div>
   <div class="mb-5">
@@ -32,11 +36,43 @@ import Button from "./ui/button.astro";
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     />
     <div class="empty-feedback text-red-400 text-sm mt-1">
-      Please provide your email address.
+      Por favor indique su correo electronico.
     </div>
     <div class="invalid-feedback text-red-400 text-sm mt-1">
-      Please provide a valid email address.
+      Por favor indique un correo electronico valido.
     </div>
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Telefono"
+      required
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="telefono"
+    />
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Por favor indique su numero teléfonico.
+    </div>
+  </div>
+  <div class="mb-5">
+    <input
+      type="text"
+      placeholder="Compañia"
+      required
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      name="compañia"
+    />
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Por favor indique su compañia.
+    </div>
+  </div>
+  <div class="mb-5">
+    <select required class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none  focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100" name="Motivo del mensaje" id="motivo">
+      <option value="compras">Compras al Mayor</option>
+      <option value="servicios">Centros de Servicio</option>
+      <option value="cursos">Cursos de Reparación e Instalación</option>
+      <option value="otro">Otro</option>
+    </select>
   </div>
   <div class="mb-3">
     <textarea
@@ -46,7 +82,7 @@ import Button from "./ui/button.astro";
       class="w-full px-4 py-3 border-2 placeholder:text-gray-800 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      Please enter your message.
+      Por favor indique su mensaje.
     </div>
   </div>
   <Button type="submit" size="lg" block>Enviar</Button>
