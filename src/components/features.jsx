@@ -18,12 +18,12 @@ export default function Features() {
 
   return (
     <div className="max-w-[1500px] gap-2 grid grid-cols-12 grid-rows-2 px-8">
-      <Card className="col-span-12 sm:col-span-4 h-[300px] hover:-translate-y-1">
+      <Card className="col-span-12 sm:col-span-4 h-[300px] hover:-translate-y-1 sh drop-shadow-sm">
         <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-          <p className="text-tiny text-white/60 uppercase font-bold">
+          <p className="text-tiny text-black/60 uppercase font-bold">
             Ecológico
           </p>
-          <h4 className="text-white font-medium text-large">
+          <h4 className="text-black font-medium text-large">
             Comprometidos con el planeta diseñamos y fabricamos con materiales
             100% reciclables. Cuida el medio ambiente mientras ahorras energía
             con nuestro diseño ecológico.

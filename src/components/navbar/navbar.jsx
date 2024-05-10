@@ -82,8 +82,7 @@ export default function App() {
                 disableRipple
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent hover:text-red-400"
                 endContent={icons.chevron}
-                radius="sm"
-                variant="light">
+                variant="flat">
                 Productos
               </Button>
             </DropdownTrigger>

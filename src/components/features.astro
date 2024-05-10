@@ -60,14 +60,14 @@ const features = [
   </p>
 </div>
 
-<!-- grid sm:grid-cols-2 md:grid-cols-3 mt-16 max-w-screen-2xl mx-auto -->
+<!-- grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 max-w-screen-2xl mx-auto -->
 <div
-  class="mt-16 max-w-screen-2xl mx-auto">
-  <Features client:load />
-  <!-- {
+  class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16 max-w-screen-2xl mx-auto">
+  <!-- <Features client:load /> -->
+  {
     features.map((item) => (
       <div class="flex gap-4 items-start">
-        <div class={`mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0`}>
+        <div class={`mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0`}>
           <Icon class={`text-${item.color}-300`} name={item.icon} />
         </div>
         <div>
@@ -76,5 +76,5 @@ const features = [
         </div>
       </div>
     ))
-  } -->
+  }
 </div>
