@@ -14,30 +14,9 @@ import {
   DropdownMenu,
   DropdownItem,
 } from "@nextui-org/react";
-import {
-  ChevronDown,
-  Lock,
-  Activity,
-  Flash,
-  Server,
-  TagUser,
-  Scale,
-} from "./Icons.jsx";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const icons = {
-    chevron: <ChevronDown fill="currentColor" size={16} />,
-    scale: <Scale className="text-warning" fill="currentColor" size={30} />,
-    lock: <Lock className="text-success" fill="currentColor" size={30} />,
-    activity: (
-      <Activity className="text-secondary" fill="currentColor" size={30} />
-    ),
-    flash: <Flash className="text-primary" fill="currentColor" size={30} />,
-    server: <Server className="text-success" fill="currentColor" size={30} />,
-    user: <TagUser className="text-danger" fill="currentColor" size={30} />,
-  };
 
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
@@ -50,13 +29,7 @@ export default function App() {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           <a href="/">
-            <img
-              src={
-                "images/logoSlogan.png"
-              }
-              alt="Termotronic"
-              width={200}
-            />
+            <img src={"images/logoSlogan.png"} alt="Termotronic" width={200} />
           </a>
         </NavbarBrand>
       </NavbarContent>
@@ -64,27 +37,22 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
           <a href="/">
-            <img
-              src={
-                "images/logoSlogan.png"
-              }
-              alt="Termotronic"
-              width={200}
-            />
+            <img src={"images/logoSlogan.png"} alt="Termotronic" width={200} />
           </a>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link className="hover:text-red-400" color="foreground" href="/">
+            Home
+          </Link>
+        </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
-              <Button
-                disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent hover:text-red-400"
-                endContent={icons.chevron}
-                variant="flat">
+              <Link className="hover:text-red-400" color="foreground" href="#">
                 Productos
-              </Button>
+              </Link>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
@@ -94,22 +62,23 @@ export default function App() {
             }}>
             <DropdownItem
               key="termotronic"
-              description="Instalacion del Calentador de agua TERMOTRONIC."
-              startContent={icons.scale}
+              description="Agua Caliente para Toda la Vida."
               href="/products/termotronic">
               Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
-              description="Instalacion del Calentador de agua CBX."
-              startContent={icons.activity}
+              description="Básicamente perfecto."
               href="/products/cbx">
               CBX
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavbarItem>
-          <Link className="hover:text-red-400" color="foreground" href="/information">
+          <Link
+            className="hover:text-red-400"
+            color="foreground"
+            href="/information">
             Información
           </Link>
         </NavbarItem>
@@ -126,20 +95,44 @@ export default function App() {
             Aliados
           </Link>
         </NavbarItem>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Link className="hover:text-red-400" color="foreground" href="#">
+                Soporte
+              </Link>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            className="w-[340px]"
+            itemClasses={{
+              base: "gap-4",
+            }}>
+            <DropdownItem key="servicios" href="/servicios">
+              Servicios
+            </DropdownItem>
+            <DropdownItem key="garantia" href="/servicios">
+              Garantia
+            </DropdownItem>
+            <DropdownItem key="manuales" href="/servicios">
+              Manuales
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </NavbarContent>
 
       <NavbarMenu>
+        <NavbarMenuItem>
+          <Link className="hover:text-red-400" color="foreground" href="/">
+            Home
+          </Link>
+        </NavbarMenuItem>
         <Dropdown>
           <NavbarMenuItem>
             <DropdownTrigger>
-              <Button
-                disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent hover:text-red-400"
-                endContent={icons.chevron}
-                radius="sm"
-                variant="light">
+              <Link className="hover:text-red-400" color="foreground" href="#">
                 Productos
-              </Button>
+              </Link>
             </DropdownTrigger>
           </NavbarMenuItem>
           <DropdownMenu
@@ -149,22 +142,23 @@ export default function App() {
             }}>
             <DropdownItem
               key="termotronic"
-              description="Instalacion del Calentador de agua TERMOTRONIC."
-              startContent={icons.scale}
+              description="Agua Caliente para Toda la Vida."
               href="/products/termotronic">
               Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
-              description="Instalacion del Calentador de agua CBX."
-              startContent={icons.activity}
+              description="Básicamente perfecto."
               href="/products/cbx">
               CBX
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <NavbarMenuItem>
-          <Link className="hover:text-red-400" color="foreground" href="/information">
+          <Link
+            className="hover:text-red-400"
+            color="foreground"
+            href="/information">
             Información
           </Link>
         </NavbarMenuItem>
@@ -181,6 +175,30 @@ export default function App() {
             Aliados
           </Link>
         </NavbarMenuItem>
+        <Dropdown>
+          <NavbarItem>
+            <DropdownTrigger>
+              <Link className="hover:text-red-400" color="foreground" href="#">
+                Soporte
+              </Link>
+            </DropdownTrigger>
+          </NavbarItem>
+          <DropdownMenu
+            className="w-[340px]"
+            itemClasses={{
+              base: "gap-4",
+            }}>
+            <DropdownItem key="servicios" href="/servicios">
+              Servicios
+            </DropdownItem>
+            <DropdownItem key="garantia" href="/servicios">
+              Garantia
+            </DropdownItem>
+            <DropdownItem key="manuales" href="/servicios">
+              Manuales
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </NavbarMenu>
     </Navbar>
   );
