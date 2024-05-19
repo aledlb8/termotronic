@@ -29,7 +29,7 @@ export default function App() {
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
           <a href="/">
-            <img src={"images/logoSlogan.png"} alt="Termotronic" width={200} />
+            <img src={"images/logoTermotronic.png"} alt="Termotronic" width={200} />
           </a>
         </NavbarBrand>
       </NavbarContent>
@@ -37,7 +37,7 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarBrand>
           <a href="/">
-            <img src={"images/logoSlogan.png"} alt="Termotronic" width={200} />
+            <img src={"images/logoTermotronic.png"} alt="Termotronic" width={200} />
           </a>
         </NavbarBrand>
       </NavbarContent>

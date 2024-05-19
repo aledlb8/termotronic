@@ -29,11 +29,11 @@ export const footerLinks = [
     items: [
       { title: "Termotronic", href: "/products/termotronic" },
       { title: "CBX", href: "/products/cbx" },
-      { title: "Información", href: "/información" },
+      { title: "Kit", href: "/información" },
     ],
   },
   {
-    title: "Blog",
+    title: "Videos",
     items: [
       { title: "Instalando un Termotronic", href: "https://termotronic-instalacion.blogspot.com/2012/10/la-instalacion.html" },
       // { title: "Uso e instalación de kit de plomería", href: "/blog/uso-kit-plomeria" },
