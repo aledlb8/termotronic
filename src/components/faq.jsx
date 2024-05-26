@@ -146,7 +146,7 @@ export default function FAQ() {
           En el gráfico se puede observar la relación entre la temperatura de
           salida y caudal de agua (en Litros por minuto) basado en una
           temperatura de entrada de 25 grados centígrados.
-          <img src="images/data.png" />
+          <img src="/images/data.png" />
           Temperatura de entrada del agua: cuanto más alta sea la temperatura de
           entrada de agua más caliente será la temperatura de salida. Un
           calentador de 11Kw con agua circulado a 8 litros por minuto aumenta la
