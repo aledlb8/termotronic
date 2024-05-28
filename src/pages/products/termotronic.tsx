@@ -6,7 +6,7 @@ const images = [
   '/images/TermotronicLimites.jpg',
   '/images/TermotronicLimites2.jpg',
   '/images/TermotronicTodaLaVida-BanoBlanco.jpg',
-  '/images/TermotronicLimTermotronicTodaLaVidaBanoMarrontes.jpg',
+  '/images/TermotronicTodaLaVidaBanoMarron.jpg',
 ];
 
 const AnimatedBackground: React.FC = () => {
@@ -20,15 +20,8 @@ const AnimatedBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-screen w-screen overflow-hidden">
-      {images.map((image, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${currentImage === index ? 'opacity-100' : 'opacity-0'
-            }`}
-          style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-        />
-      ))}
+    <div className='flex flex-col items-center justify-center rounded-xl'>
+      <img className='w-[700px] rounded-[inherit] border object-contain shadow-lg dark:block' src={images[currentImage]} style={{ width: "80%", }} />
     </div>
   );
 };

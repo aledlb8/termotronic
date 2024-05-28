@@ -2,24 +2,16 @@
 import Layout from "@layouts/ProductLayout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import TabsComponent from "@components/navbar/tab";
 ---
 
 <Layout title="Termotronic">
   <Container>
     <Sectionhead>
-      <p slot="title" class="font-bold text-5xl text-white">Termotronic</p>
-      <p slot="desc" class="font-bold text-2xl text-gray-200">Calentador Eléctrico de Agua sin Tanque.</p>
+      <p slot="title" class="font-bold text-5xl text-black">Termotronic</p>
+      <p slot="desc" class="font-bold text-2xl text-gray-800">Calentador Eléctrico de Agua sin Tanque.</p>
     </Sectionhead>
 
-    <div
-      class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 relative z-20 text-white">
-      <h2 class="font-bold text-3xl">Mejorando el mundo con Termotronic.</h2>
-      <p class="text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam,
-        repellat beatae culpa quia consequatur maiores unde corporis. Ullam ut
-        voluptas tempora dicta consectetur mollitia earum odio porro
-        voluptatibus odit?
-      </p>
-    </div>
+    <TabsComponent client:load />
   </Container>
 </Layout>

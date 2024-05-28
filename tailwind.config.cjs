@@ -5,7 +5,7 @@ module.exports = {
   safelist: [
     'text-green-300', 'text-blue-300', 'text-gray-300', 'text-cyan-300', 'text-red-300', 'text-yellow-300'
   ],
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}","./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -14,7 +14,7 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [require("@tailwindcss/typography"),require('daisyui'),nextui()],
+  plugins: [require("@tailwindcss/typography"), require('daisyui'), nextui()],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "light", // name of one of the included themes for dark mode
@@ -25,4 +25,18 @@ module.exports = {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
+  theme: {
+    extend: {
+      animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+      },
+      keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+      },
+    }
+  }
 };

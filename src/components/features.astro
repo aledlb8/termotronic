@@ -50,7 +50,7 @@ const features = [
 ---
 
 <div class="mt-16 md:mt-0 max-w-screen-2xl mx-auto">
-  <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight">
+  <h2 class="text-2xl lg:text-2xl font-bold lg:tracking-tight text-center">
     Todo lo que necesitas saber de un termotronic.
   </h2>
 </div>
@@ -61,8 +61,8 @@ const features = [
   <!-- <Features client:load /> -->
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class={`mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0`}>
+      <div class="flex gap-4 rounded-lg border p-8 border-black shadow-2xl items-start bg-gray-100 hover:-translate-y-1 translate">
+        <div class={`mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0 `}>
           <Icon class={`text-${item.color}-300`} name={item.icon} />
         </div>
         <div>
