@@ -1,46 +1,30 @@
 ---
-import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import TabsComponent from "@components/navbar/tab";
+import AnimatedBackground from "./kit";
 ---
 
-<Layout title="Termotronic">
+<Layout title="Kit">
   <Container>
+    <AnimatedBackground client:load />
     <Sectionhead>
-      <Fragment slot="title">Kit de Instalacion</Fragment>
-      <Fragment slot="desc">Calentador Eléctrico de Agua sin Tanque.</Fragment>
+      <p
+        slot="title"
+        class="font-bold text-2xl lg:text-4xl text-black flex justify-center items-center">
+        Kit de Instalacion
+      </p>
+      <p
+        slot="desc"
+        class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
+        Para comenzar a disfrutar de la agua caliente sin limited, visite a
+        nuestros&nbsp;<a class="text-blue-700 underline" href="/aliados"
+          >aliados.</a
+        >
+      </p>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Mejorando el mundo con Termotronic.
-      </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam,
-        repellat beatae culpa quia consequatur maiores unde corporis. Ullam ut
-        voluptas tempora dicta consectetur mollitia earum odio porro
-        voluptatibus odit?
-      </p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
-      <div class="group">
-        <div class="w-full aspect-square">
-          <Picture
-            src={"https://media.discordapp.net/attachments/1150636258075353099/1234194323063443526/WhatsApp_Image_2024-04-28_at_09.04.50_fae5688f.jpg?ex=66312a08&is=662fd888&hm=8ba7e87c5585aa08958ca93e3e917c484c3dbb87542f4d8e7cc7886af1d95261&=&format=webp"}
-            alt={"uh"}
-            sizes="(max-width: 800px) 100vw, 400px"
-            width={400}
-            height={400}
-            class="w-full rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
-          />
-        </div>
-
-        <div class="mt-4 text-center">
-          <h2 class="text-lg text-gray-800">foto</h2>
-          <h3 class="text-sm text-slate-500">super texto cool</h3>
-        </div>
-      </div>
-    </div>
+    <TabsComponent client:load product="kit" />
   </Container>
 </Layout>

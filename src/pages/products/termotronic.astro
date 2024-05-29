@@ -1,17 +1,30 @@
 ---
-import Layout from "@layouts/ProductLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import TabsComponent from "@components/navbar/tab";
+import AnimatedBackground from "./termotronic";
 ---
 
 <Layout title="Termotronic">
   <Container>
+    <AnimatedBackground client:load />
     <Sectionhead>
-      <p slot="title" class="font-bold text-2xl lg:text-4xl text-black flex justify-items-start items-start">Termotronic</p>
-      <p slot="desc" class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-items-start items-start">Calentador Eléctrico de Agua sin Tanque.</p>
+      <p
+        slot="title"
+        class="font-bold text-2xl lg:text-4xl text-black flex justify-center items-center">
+        Termotronic
+      </p>
+      <p
+        slot="desc"
+        class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
+        Para comenzar a disfrutar de la agua caliente sin limited, visite a
+        nuestros&nbsp;<a class="text-blue-700 underline" href="/aliados"
+          >aliados.</a
+        >
+      </p>
     </Sectionhead>
 
-    <TabsComponent client:load />
+    <TabsComponent client:load product="termotronic" />
   </Container>
 </Layout>

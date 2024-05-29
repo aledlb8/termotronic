@@ -128,7 +128,7 @@ export default function App() {
             <DropdownItem key="garantia" href="/servicios">
               Garantia
             </DropdownItem>
-            <DropdownItem key="manuales" href="/servicios">
+            <DropdownItem key="manuales" href="/manuales">
               Manuales
             </DropdownItem>
           </DropdownMenu>
@@ -214,7 +214,7 @@ export default function App() {
             <DropdownItem key="garantia" href="/servicios">
               Garantia
             </DropdownItem>
-            <DropdownItem key="manuales" href="/servicios">
+            <DropdownItem key="manuales" href="/manuales">
               Manuales
             </DropdownItem>
           </DropdownMenu>

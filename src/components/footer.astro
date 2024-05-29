@@ -12,9 +12,13 @@ import Logos from "./logos.astro";
         <div>
           <span class="text-lg font-bold">{section.title}</span>
           <ul class="mt-4 list-inside space-y-3">
-            {section.items?.map((link) => (
+            {section.items?.map((link) => link.open ? (
               <li>
-                <a href={link.href} class="text-sm hover:text-gray-300">
+                <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-sm hover:text-gray-300">{link.title}</a>
+              </li>
+            ) : (
+              <li>
+                <a href={link.href}  class="text-sm hover:text-gray-300">
                   {link.title}
                 </a>
               </li>

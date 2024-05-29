@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 const images = [
-  '/images/TermotronicAhorre.jpg',
-  '/images/TermotronicDuradero-BanoBlanco.jpg',
-  '/images/TermotronicLimites.jpg',
-  '/images/TermotronicTodaLaVida-BanoBlanco.jpg',
-  '/images/TermotronicLimites2.jpg',
-  '/images/TermotronicTodaLaVidaBanoMarron.jpg',
+  '/images/KitAsegure.jpg',
+  '/images/KitTodo.jpg',
 ];
 
 const AnimatedBackground: React.FC = () => {
