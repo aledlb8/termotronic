@@ -2,7 +2,7 @@ import { Tabs, Tab } from "@nextui-org/react";
 
 export default function TabsComponent() {
   return (
-    <div className="flex w-full flex-col justify-center items-center mt-4">
+    <div className="flex w-full flex-col mt-4">
       <Tabs aria-label="Options" color="primary" variant="bordered">
         <Tab
           key="photos"

@@ -20,8 +20,8 @@ const AnimatedBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className='flex flex-col items-center justify-center rounded-xl'>
-      <img className='w-[700px] rounded-[inherit] border object-contain shadow-lg dark:block' src={images[currentImage]} style={{ width: "80%", }} />
+    <div className='flex flex-col items-center justify-center rounded-xl mt-4'>
+      <img className='w-[700px] rounded-[inherit] border object-contain shadow-lg dark:block' src={images[currentImage]} style={{ width: "90%", }} />
     </div>
   );
 };
