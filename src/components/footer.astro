@@ -12,29 +12,39 @@ import Logos from "./logos.astro";
         <div>
           <span class="text-lg font-bold">{section.title}</span>
           <ul class="mt-4 list-inside space-y-3">
-            {section.items?.map((link) => link.open ? (
-              <li>
-                <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-sm hover:text-gray-300">{link.title}</a>
-              </li>
-            ) : (
-              <li>
-                <a href={link.href}  class="text-sm hover:text-gray-300">
-                  {link.title}
-                </a>
-              </li>
-            ))}
+            {section.items?.map((link) =>
+              link.open ? (
+                <li>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm hover:text-gray-300">
+                    {link.title}
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a href={link.href} class="text-sm hover:text-gray-300">
+                    {link.title}
+                  </a>
+                </li>
+              )
+            )}
           </ul>
         </div>
       ))
     }
     <div class="flex flex-col items-center md:col-span-2">
-      <img src="/images/logoBlanco.png" width={200} />
+      <a href="/">
+        <img src="/images/logoBlanco.png" width={200} />
+      </a>
       <Logos />
     </div>
   </div>
   <div class="border-t bg-zinc-950">
     <p class="text-center text-sm text-white py-6">
-      Copyright © 1998 - {new Date().getFullYear()} Termotronic.<br />RIF
+      Copyright © 1994 - {new Date().getFullYear()} Termotronic.<br />RIF
       J-301781899<br />+58 (212)239.6165 - (212)237.4551 - (212)237.5083
     </p>
   </div>

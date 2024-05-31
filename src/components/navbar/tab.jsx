@@ -4,14 +4,14 @@ export default function TabsComponent({ product }) {
   const products = {
     termotronic: {
       caracteristicas: `
-        Los calentadores de agua Termotronic son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda. 
-        Su capacidad es de 11 Kw suficiente para una abundante ducha.
+        Los Termotronic son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda.<br />
+        Su capacidad es de 11 Kw, suficiente para una abundante ducha.<br /><br />
         
-        Aquí hay algunos de sus beneficios:
-        - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.
-        - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.
-        - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.
-        - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.
+        Beneficios:<br />
+        - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.<br />
+        - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.<br />
+        - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.<br />
+        - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.<br />
         - Agua caliente ilimitada: El agua caliente nunca se agota.
       `,
       especificaciones: `
@@ -33,14 +33,14 @@ export default function TabsComponent({ product }) {
 
     cbx: {
       caracteristicas: `
-        Los calentadores de agua CBX son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda. 
-        Su capacidad es de 11 Kw suficiente para una abundante ducha con agua caliente.
+        Los CBX son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda.<br />
+        Su capacidad es de 11 Kw suficiente para una abundante ducha con agua caliente.<br /><br />
 
-        Aquí hay algunos de sus beneficios:
-        - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.
-        - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.
-        - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.
-        - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.
+        Beneficios:<br />
+        - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.<br />
+        - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.<br />
+        - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.<br />
+        - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.<br />
         - Agua caliente ilimitada: El agua caliente nunca se agota.
       `,
       especificaciones: `
@@ -62,17 +62,17 @@ export default function TabsComponent({ product }) {
 
     kit: {
       caracteristicas: `
-        Los kits de instalación Termotronic son conjuntos de piezas que se utilizan para instalar los calentadores de agua Termotronic y CBX.
+        Los kits de Termotronic son conjuntos de piezas que se utilizan para instalar los calentadores de agua Termotronic y CBX.<br /><br />
 
-        El kit de instalación incluye:
-        - Válvulas de Paso: Permiten controlar el flujo de agua hacia el calentador de agua.
-        - Conexiones de tuberías: Conectan el calentador de agua a las tuberías de agua fría y caliente.
-        - Válvula de alivio de presión: Libera presión si el agua en caso de obstrucción o falla.
-        - Filtro de agua: Elimina los sedimentos del agua para proteger el calentador de agua.
-        - Instrucciones de instalación: Guían al usuario a través del proceso de instalación.
+        El kit de instalación incluye:<br />
+        - Válvulas de Paso: Permiten controlar el flujo de agua hacia el calentador de agua.<br />
+        - Conexiones de tuberías: Conectan el calentador de agua a las tuberías de agua fría y caliente.<br />
+        - Válvula de alivio de presión: Libera presión si el agua en caso de obstrucción o falla.<br />
+        - Filtro de agua: Elimina los sedimentos del agua para proteger el calentador de agua.<br />
+        - Instrucciones: Guían al usuario a través del proceso de instalación.<br /><br />
 
-        Los kits de instalación Termotronic están disponibles para su compra en línea y en tiendas minoristas de mejoras para el hogar.
-        La instalación de un kit de instalación Termotronic debe ser realizada por un plomero calificado.
+        Los kits de instalación Termotronic están disponibles para su compra en línea y en tiendas minoristas de mejoras para el hogar.<br />
+        La instalación de un kit Termotronic debe ser realizada por un plomero calificado.
       `,
       especificaciones: `
         <table>
@@ -99,9 +99,11 @@ export default function TabsComponent({ product }) {
               <span>Caracteristicas</span>
             </div>
           }>
-          <h1>
-            <pre>{products[product]?.caracteristicas || ""}</pre>
-          </h1>
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: products[product]?.caracteristicas || "",
+            }}
+          />
         </Tab>
         <Tab
           key="Especificaciones"

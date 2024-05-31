@@ -10,19 +10,17 @@ import AnimatedBackground from "./kit";
   <Container>
     <AnimatedBackground client:load />
     <Sectionhead>
-      <p
+      <h1
         slot="title"
         class="font-bold text-2xl lg:text-4xl text-black flex justify-center items-center">
         Kit de Instalacion
-      </p>
-      <p
+      </h1>
+      <h1
         slot="desc"
         class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
-        Para comenzar a disfrutar de la agua caliente sin limited, visite a
-        nuestros&nbsp;<a class="text-blue-700 underline" href="/aliados"
-          >aliados.</a
-        >
-      </p>
+        Para comenzar a disfrutar de agua caliente sin límite, visite a nuestros
+      </h1>
+      <a slot="desc" class="font-bold text-xl lg:text-2xl flex justify-center items-center text-blue-700 underline" href="/aliados">aliados.</a>
     </Sectionhead>
 
     <TabsComponent client:load product="kit" />
