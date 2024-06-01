@@ -51,14 +51,14 @@ export default function App() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link className="hover:text-red-400" color="foreground" href="/">
+          <Link className="hover:text-red-400 font-bold" color="foreground" href="/">
             Home
           </Link>
         </NavbarItem>
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
-              <Link className="hover:text-red-400" color="foreground" href="#">
+              <Link className="hover:text-red-400 font-bold" color="foreground" href="#">
                 Productos
               </Link>
             </DropdownTrigger>
@@ -71,7 +71,8 @@ export default function App() {
             <DropdownItem
               key="termotronic"
               description="Agua Caliente para Toda la Vida."
-              href="/products/termotronic">
+              href="/products/termotronic"
+              >
               Termotronic
             </DropdownItem>
             <DropdownItem
@@ -90,20 +91,20 @@ export default function App() {
         </Dropdown>
         <NavbarItem>
           <Link
-            className="hover:text-red-400"
+            className="hover:text-red-400 font-bold"
             color="foreground"
             href="/information">
             Información
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="hover:text-red-400" color="foreground" href="/faq">
+          <Link className="hover:text-red-400 font-bold" color="foreground" href="/faq">
             FAQ
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="hover:text-red-400"
+            className="hover:text-red-400 font-bold"
             color="foreground"
             href="/aliados">
             Aliados
@@ -112,7 +113,7 @@ export default function App() {
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
-              <Link className="hover:text-red-400" color="foreground" href="#">
+              <Link className="hover:text-red-400 font-bold" color="foreground" href="#">
                 Soporte
               </Link>
             </DropdownTrigger>
