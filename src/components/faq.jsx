@@ -2,7 +2,7 @@ import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function FAQ() {
   return (
-    <div className="mt-16 md:mt-0 max-w-screen-2xl mx-auto pt-12">
+    <div className="mt-16 md:mt-0 max-w-screen-md mx-auto pt-12">
       <h1 className="text-2xl lg:text-2xl font-bold lg:tracking-tight pb-10">
         Preguntas Frecuentes
       </h1>
