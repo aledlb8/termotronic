@@ -15,11 +15,11 @@ export default function NotFound() {
   return (
     <div className="min-h-[calc(100vh-16rem)] flex items-center justify-center">
       <div className="mt-16 text-center">
-        <h1 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+        <h1 className="text-4xl font-bold lg:tracking-tight">
           404
         </h1>
-        <p className="text-lg mt-4 text-slate-600">
-          Página no encontrada. Redirigiéndose...
+        <p className="text-2xl mt-4 text-slate-600">
+          Esta página ha cambiado de lugar. Redirigiéndose...
         </p>
       </div>
     </div>
