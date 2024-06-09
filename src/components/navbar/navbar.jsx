@@ -52,7 +52,7 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link className="hover:text-red-400 font-bold" color="foreground" href="/">
-            Home
+            Inicio
           </Link>
         </NavbarItem>
         <Dropdown>
@@ -139,7 +139,7 @@ export default function App() {
       <NavbarMenu>
         <NavbarMenuItem>
           <Link className="hover:text-red-400" color="foreground" href="/">
-            Home
+            Inicio
           </Link>
         </NavbarMenuItem>
         <Dropdown>
