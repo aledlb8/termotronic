@@ -11,9 +11,9 @@ export const footerLinks = [
   {
     title: "Productos",
     items: [
-      { title: "Termotronic", href: "/products/termotronic" },
-      { title: "CBX", href: "/products/cbx" },
-      { title: "Kit", href: "/products/kit" },
+      { title: "Termotronic", href: "/productos/termotronic" },
+      { title: "CBX", href: "/productos/cbx" },
+      { title: "Kit", href: "/productos/kit" },
     ],
   },
   {

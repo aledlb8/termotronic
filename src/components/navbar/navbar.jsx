@@ -71,20 +71,20 @@ export default function App() {
             <DropdownItem
               key="termotronic"
               description="Agua Caliente para Toda la Vida."
-              href="/products/termotronic"
+              href="/productos/termotronic"
               >
               Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
               description="Básicamente perfecto."
-              href="/products/cbx">
+              href="/productos/cbx">
               CBX
             </DropdownItem>
             <DropdownItem
               key="kit"
               description="Kit de plomería e instalación."
-              href="/products/kit">
+              href="/productos/kit">
               Kit de Instalacion
             </DropdownItem>
           </DropdownMenu>
@@ -93,7 +93,7 @@ export default function App() {
           <Link
             className="hover:text-red-400 font-bold"
             color="foreground"
-            href="/information">
+            href="/informacion">
             Información
           </Link>
         </NavbarItem>
@@ -158,19 +158,19 @@ export default function App() {
             <DropdownItem
               key="termotronic"
               description="Agua Caliente para Toda la Vida."
-              href="/products/termotronic">
+              href="/productos/termotronic">
               Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
               description="Básicamente perfecto."
-              href="/products/cbx">
+              href="/productos/cbx">
               CBX
             </DropdownItem>
             <DropdownItem
               key="kit"
               description="Kit de plomería e instalación."
-              href="/products/kit">
+              href="/productos/kit">
               Kit de Instalacion
             </DropdownItem>
           </DropdownMenu>
@@ -179,7 +179,7 @@ export default function App() {
           <Link
             className="hover:text-red-400"
             color="foreground"
-            href="/information">
+            href="/informacion">
             Información
           </Link>
         </NavbarMenuItem>
