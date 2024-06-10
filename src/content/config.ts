@@ -5,7 +5,7 @@ export const footerLinks = [
       { title: "Acerca", href: "/nosotros" },
       { title: "Contactos", href: "/aliados" },
       { title: "Servicios", href: "/servicios" },
-      { title: "Ecológicos", href: "/green" },
+      { title: "Ecológicos", href: "/verde" },
     ],
   },
   {
