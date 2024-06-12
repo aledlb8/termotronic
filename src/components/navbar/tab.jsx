@@ -65,13 +65,13 @@ export default function TabsComponent({ product }) {
         Los kits de Termotronic son conjuntos de piezas que se utilizan para instalar los calentadores de agua Termotronic y CBX.<br /><br />
 
         El kit de instalación incluye:<br />
-        - Válvulas de Paso: Permiten controlar el flujo de agua hacia el calentador de agua.<br />
-        - Conexiones de tuberías: Conectan el calentador de agua a las tuberías de agua fría y caliente.<br />
-        - Válvula de alivio de presión: Libera presión si el agua en caso de obstrucción o falla.<br />
-        - Filtro de agua: Elimina los sedimentos del agua para proteger el calentador de agua.<br />
+        - Válvulas de Paso: Permiten controlar el flujo de agua hacia el calentador.<br />
+        - Conexiones de tuberías: Conectan el calentador a las tuberías de agua fría y caliente.<br />
+        - Válvula de alivio de presión: Libera la presión en caso de obstrucción o falla.<br />
+        - Filtro de agua: Elimina los sedimentos del agua para proteger el calentador.<br />
         - Instrucciones: Guían al usuario a través del proceso de instalación.<br /><br />
 
-        Los kits de instalación Termotronic están disponibles para su compra en línea y en tiendas minoristas de mejoras para el hogar.<br />
+        Los kits de instalación Termotronic están disponibles para su compra en línea y en tiendas especializadas de mejoras para el hogar.<br />
         La instalación de un kit Termotronic debe ser realizada por un plomero calificado.
       `,
       especificaciones: `

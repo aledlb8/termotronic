@@ -17,6 +17,8 @@ import {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
 
   return (
     <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
@@ -51,19 +53,29 @@ export default function App() {
       </NavbarContent>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link className="hover:text-red-400 font-bold" color="foreground" href="/">
+          <Link
+            className="hover:text-red-400 font-bold"
+            color="foreground"
+            href="/">
             Inicio
           </Link>
         </NavbarItem>
-        <Dropdown>
+        <Dropdown isOpen={isDropdownOpen}>
           <NavbarItem>
-            <DropdownTrigger>
-              <Link className="hover:text-red-400 font-bold" color="foreground" href="#">
+            <DropdownTrigger
+              onMouseEnter={() => setIsDropdownOpen(true)}
+              onMouseLeave={() => setIsDropdownOpen(false)}>
+              <Link
+                className="hover:text-red-400 font-bold"
+                color="foreground"
+                href="#">
                 Productos
               </Link>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
             className="w-[340px]"
             itemClasses={{
               base: "gap-4",
@@ -71,8 +83,7 @@ export default function App() {
             <DropdownItem
               key="termotronic"
               description="Agua Caliente para Toda la Vida."
-              href="/productos/termotronic"
-              >
+              href="/productos/termotronic">
               Termotronic
             </DropdownItem>
             <DropdownItem
@@ -98,7 +109,10 @@ export default function App() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link className="hover:text-red-400 font-bold" color="foreground" href="/faq">
+          <Link
+            className="hover:text-red-400 font-bold"
+            color="foreground"
+            href="/faq">
             FAQ
           </Link>
         </NavbarItem>
@@ -110,15 +124,22 @@ export default function App() {
             Aliados
           </Link>
         </NavbarItem>
-        <Dropdown>
+        <Dropdown isOpen={isDropdownOpen2}>
           <NavbarItem>
-            <DropdownTrigger>
-              <Link className="hover:text-red-400 font-bold" color="foreground" href="#">
+            <DropdownTrigger
+              onMouseEnter={() => setIsDropdownOpen2(true)}
+              onMouseLeave={() => setIsDropdownOpen2(false)}>
+              <Link
+                className="hover:text-red-400 font-bold"
+                color="foreground"
+                href="#">
                 Soporte
               </Link>
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
+            onMouseEnter={() => setIsDropdownOpen2(true)}
+            onMouseLeave={() => setIsDropdownOpen2(false)}
             className="w-[340px]"
             itemClasses={{
               base: "gap-4",
