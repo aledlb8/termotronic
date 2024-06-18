@@ -20,7 +20,7 @@ export default function TabsComponent({ product }) {
           <tr><td>Voltaje de Entrada</td><td>200~240 V.AC.</td></tr>
           <tr><td>Consumo en Max</td><td>56 Amp @ 220V 12Kw</td></tr>
           <tr><td>Rango de Trabajo</td><td>10 PSI Min. a 150 PSI Max.</td></tr>
-          <tr><td>Flujo mínimo</td><td>15 LPM</td></tr>
+          <tr><td>Flujo mínimo</td><td>1.5 LPM</td></tr>
           <tr><td>Eficiencia</td><td>99%</td></tr>
           <tr><td>Materiales</td><td>Cobre y Acero</td></tr>
           <tr><td>Conexiones de Agua</td><td>FLARE 1/2”</td></tr>
@@ -49,11 +49,11 @@ export default function TabsComponent({ product }) {
           <tr><td>Voltaje de Entrada</td><td>200~240 V.AC.</td></tr>
           <tr><td>Consumo en Max</td><td>56 Amp @ 220V 12Kw</td></tr>
           <tr><td>Rango de Trabajo</td><td>10 PSI Min. a 150 PSI Max.</td></tr>
-          <tr><td>Flujo mínimo</td><td>15 LPM</td></tr>
+          <tr><td>Flujo mínimo</td><td>1.5 LPM</td></tr>
           <tr><td>Eficiencia</td><td>99%</td></tr>
           <tr><td>Materiales</td><td>Aluminio y Acero</td></tr>
           <tr><td>Conexiones de Agua</td><td>FLARE 1/2”</td></tr>
-          <tr><td>Potencia (208V)</td><td>3.600 Min – 7.200 Med - 11.000 Max</td></tr>
+          <tr><td>Potencia (220V)</td><td>4.000 W Min – 8.000 W Med - 12.000 W Max</td></tr>
           <tr><td>Dimensiones</td><td>370 mm X 180 mm X 90 mm</td></tr>
           <tr><td>Peso</td><td>3.9 Kg</td></tr>
         </table>
