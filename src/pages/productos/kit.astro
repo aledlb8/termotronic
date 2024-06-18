@@ -6,7 +6,9 @@ import TabsComponent from "@components/navbar/tab";
 import AnimatedBackground from "./kit";
 ---
 
-<Layout title="Kit de instalación" description="Kit de instalación de plomería para Termotronic y CBX">
+<Layout
+  title="Kit de instalación"
+  description="Kit de instalación de plomería para Termotronic y CBX">
   <Container>
     <AnimatedBackground client:load />
     <Sectionhead>
@@ -16,8 +18,12 @@ import AnimatedBackground from "./kit";
         Kit de Instalacion
       </h1>
       <h1
-        slot="desc"    class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
-        <a slot="desc" class="font-bold text-xl lg:text-2xl flex justify-center items-center text-gray-800" href="/aliados">Para comenzar a disfrutar de agua caliente sin límite, visite a nuestros aliados.</a>
+        slot="desc"
+        class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
+        <a href="/aliados">
+          Para comenzar a disfrutar de agua caliente sin límite, visite a
+          nuestros aliados.
+        </a>
       </h1>
     </Sectionhead>
 

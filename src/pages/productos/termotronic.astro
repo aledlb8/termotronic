@@ -6,8 +6,9 @@ import TabsComponent from "@components/navbar/tab";
 import AnimatedBackground from "./termotronic";
 ---
 
-
-<Layout title="Termotronic" description="Termotronic - Calentadores de agua sin tanque - Con más de 30 años en el mercado">
+<Layout
+  title="Termotronic"
+  description="Termotronic - Calentadores de agua sin tanque - Con más de 30 años en el mercado">
   <Container>
     <AnimatedBackground client:load />
     <Sectionhead>
@@ -17,10 +18,13 @@ import AnimatedBackground from "./termotronic";
         Termotronic
       </h1>
       <h1
-        slot="desc"    class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
-        <a href="/aliados">Para comenzar a disfrutar de agua caliente sin límite, visite a nuestros aliados.</a>
-      </h1> 
-    
+        slot="desc"
+        class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
+        <a href="/aliados">
+          Para comenzar a disfrutar de agua caliente sin límite, visite a
+          nuestros aliados.
+        </a>
+      </h1>
     </Sectionhead>
 
     <TabsComponent client:load product="termotronic" />

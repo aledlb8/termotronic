@@ -6,7 +6,9 @@ import TabsComponent from "@components/navbar/tab";
 import AnimatedBackground from "./cbx";
 ---
 
-<Layout title="CBX" description="CBX Calentadores de agua sin tanque - El más económico del mercado">
+<Layout
+  title="CBX"
+  description="CBX Calentadores de agua sin tanque - El más económico del mercado">
   <Container>
     <AnimatedBackground client:load />
     <Sectionhead>
@@ -16,10 +18,14 @@ import AnimatedBackground from "./cbx";
         CBX
       </h1>
       <h1
-      slot="desc"    class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
-      <a href="/aliados">Para comenzar a disfrutar de agua caliente sin límite, visite a nuestros aliados. </a>
-    </h1>
-  </Sectionhead>
+        slot="desc"
+        class="font-bold text-xl lg:text-2xl text-gray-800 flex justify-center items-center">
+        <a href="/aliados">
+          Para comenzar a disfrutar de agua caliente sin límite, visite a
+          nuestros aliados.
+        </a>
+      </h1>
+    </Sectionhead>
 
     <TabsComponent client:load product="cbx" />
   </Container>
