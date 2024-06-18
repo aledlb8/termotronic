@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 const { nextui } = require("@nextui-org/react");
-const purgecss = require("@fullhuman/postcss-purgecss");
-const autoprefixer = require("autoprefixer");
 
 
 module.exports = {
@@ -18,7 +16,7 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [require("@tailwindcss/typography"), require('daisyui'), nextui(), purgecss({ content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}", autoprefixer()] })],
+  plugins: [require("@tailwindcss/typography"), require('daisyui'), nextui()],
   daisyui: {
     themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
     darkTheme: "light", // name of one of the included themes for dark mode
