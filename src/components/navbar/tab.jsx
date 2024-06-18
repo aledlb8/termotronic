@@ -53,7 +53,7 @@ export default function TabsComponent({ product }) {
           <tr><td>Eficiencia</td><td>99%</td></tr>
           <tr><td>Materiales</td><td>Aluminio y Acero</td></tr>
           <tr><td>Conexiones de Agua</td><td>FLARE 1/2”</td></tr>
-          <tr><td>Potencia (220V)</td><td>4.000 W Min – 8.000 W Med - 12.000 W Max</td></tr>
+          <tr><td>Potencia (220V)</td><td>4.000 W Min – 8.000 W Med - 12.000 W Max</td></tr> 
           <tr><td>Dimensiones</td><td>370 mm X 180 mm X 90 mm</td></tr>
           <tr><td>Peso</td><td>3.9 Kg</td></tr>
         </table>
