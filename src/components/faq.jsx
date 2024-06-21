@@ -207,7 +207,7 @@ export default function FAQ() {
           Sí. Llame a nuestro distribuidor más cercano.
         </AccordionItem>
         <AccordionItem
-          key="14"
+          key="16"
           title="¿En realidad es agua caliente o solo tibia?">
           Es agua caliente. El rendimiento del calentador puede verse afectados
           por varios factores. La temperatura de entrada del agua al calentador,
@@ -215,7 +215,7 @@ export default function FAQ() {
           caudal del agua que expide un grifo y por ultimo el voltaje que
           alimenta al calentador.
         </AccordionItem>
-        <AccordionItem key="16" title="¿Tienen varias capacidades?">
+        <AccordionItem key="17" title="¿Tienen varias capacidades?">
           El CBX está equipado con un selector de potencia. Con un simple ajuste
           se puede seleccionar entre 11Kw, 8.2Kw o 5.5Kw según la siguiente
           tabla.
@@ -233,47 +233,47 @@ export default function FAQ() {
           <br />
           *Subir un calibre si el largo del cable es superior a 20 mts.
         </AccordionItem>
-        <AccordionItem key="17" title="¿Puedo usarlo con tuberías de PVC?">
+        <AccordionItem key="18" title="¿Puedo usarlo con tuberías de PVC?">
           Hemos realizado pruebas con la tubería de PVC para agua caliente marca
           PAVCO con resultados satisfactorios.
         </AccordionItem>
-        <AccordionItem key="18" title="¿Cualquier persona puede instalarlo?">
+        <AccordionItem key="19" title="¿Cualquier persona puede instalarlo?">
           Solo debe ser instalado por un electricista profesional certificado.
         </AccordionItem>
         <AccordionItem
-          key="19"
+          key="20"
           title="¿A la hora de una falla, venden ustedes los repuestos?">
           Si, y aparte de vender los repuestos tenemos personal altamente
           calificado para reparar en garantía o fuera de esta, detectar el
           causante de falla en la instalación para evitar futuros problemas y
           entrenamiento o asesoramiento a terceros.
         </AccordionItem>
-        <AccordionItem key="20" title="Cuanto tiempo tienen en el mercado?">
+        <AccordionItem key="21" title="Cuanto tiempo tienen en el mercado?">
           Nuestra planta abrió sus puertas a la fabricación de equipos
           electrónicos en 1987. Termotronic sale por primera vez al mercado en
           1994.
         </AccordionItem>
-        <AccordionItem key="21" title="¿Que experiencia han tenido?">
+        <AccordionItem key="22" title="¿Que experiencia han tenido?">
           Todos los que trabajamos en TERMOTRONIC estamos muy estimulados por
           los comentarios de agradecimiento y felicitaciones de nuestros
           clientes que día a día utilizan este novedoso sistema para calentar
           agua.
         </AccordionItem>
         <AccordionItem
-          key="22"
+          key="23"
           title="¿No es una limitación que trabaje solo con 220 voltios? ¿Por que no puedo conectarlo a 110 voltios?">
           TERMOTRONIC necesita calentar el agua instantáneamente y según circula
           por dentro de él y para obtener la potencia necesaria para este
           trabajo debe estar conectado a una línea de 220 voltios.
         </AccordionItem>
         <AccordionItem
-          key="23"
+          key="24"
           title="¿Puedo conectar dos calentadores en serie?">
           No, pero si en paralelo. En el caso de que se requieran grandes
           volúmenes de agua, una instalación en paralelo de dos o más
           calentadores es la solución.
         </AccordionItem>
-        <AccordionItem key="24" title="¿Que me cubre la garantía?">
+        <AccordionItem key="25" title="¿Que me cubre la garantía?">
           El TERMOTRONIC está garantizado contra cualquier defecto de fábrica,
           en sus partes mecánicas por un período de 5 años y en sus partes
           eléctricas por 1 año, a partir de la fecha de compra, respaldada por
@@ -288,7 +288,7 @@ export default function FAQ() {
           información requerida para prestarle servicio a su unidad.
         </AccordionItem>
         <AccordionItem
-          key="25"
+          key="26"
           title="¿Por que sugieren en algunos casos, la instalación de un filtro de paso rápido?">
           En algunas zonas el agua de la calle viene con impurezas (barro,
           sólidos pequeños) que pueden ocasionalmente obstruir el filtro interno
@@ -297,19 +297,19 @@ export default function FAQ() {
           aconsejable instalar un filtro de paso rápido.
         </AccordionItem>
         <AccordionItem
-          key="26"
+          key="27"
           title="¿La variación en el voltaje o picos de voltaje pueden afectar la unidad?">
           La variación de voltaje afecta el rendimiento del calentador (calienta
           mejor sí el voltaje es más alto y viceversa). Los picos de voltaje no
           afectan el funcionamiento del TERMOTRONIC.
         </AccordionItem>
         <AccordionItem
-          key="27"
+          key="28"
           title="¿Los cortes en el suministro de agua ocasionan algún daño?">
           No. Nuestro calentador solo funciona si está circulando agua.
         </AccordionItem>
         <AccordionItem
-          key="28"
+          key="29"
           title="¿Es prudente bajar el breaker que alimenta el calentador si voy de viaje?">
           Es prudente apagar todos los breaker de una vivienda cuando va a estar
           desocupada por algún tiempo. Siempre observando no dejar sin
@@ -317,12 +317,12 @@ export default function FAQ() {
           requieran electricidad permanentemente.
         </AccordionItem>
         <AccordionItem
-          key="29"
+          key="30"
           title="¿Puedo conectar la unidad en un circuito cerrado?">
           No lo recomendamos, Termotronic no fue diseñado para ese uso.
         </AccordionItem>
         <AccordionItem
-          key="30"
+          key="31"
           title="¿Por que se disparan los breaker en algunas oportunidades?">
           Pueden ser varias las razones:
           <br />
@@ -343,21 +343,21 @@ export default function FAQ() {
           calentador.
         </AccordionItem>
         <AccordionItem
-          key="31"
+          key="32"
           title="¿Cuánto tarda en llegar el agua caliente?">
           Depende de la distancia que hay entre el TERMOTRONIC y el punto donde
           se desea obtener agua caliente. Sí el calentador está en la misma
           habitación no más de 5 segundos. Si el calentador esta a unos 15
           metros debe tardar aproximadamente unos 30 a 45 segundos.
         </AccordionItem>
-        <AccordionItem key="32" title="¿A que se refieren con instantáneo?">
+        <AccordionItem key="33" title="¿A que se refieren con instantáneo?">
           Los calentadores eléctricos tradicionales, una vez enchufados, pueden
           tardar mas de 30 minutos en calentar el agua de su tanque. El
           TERMOTRONIC calienta el agua según va circulado por dentro de él, por
           lo tanto no es necesario esperar para poder usar el agua caliente.
         </AccordionItem>
         <AccordionItem
-          key="33"
+          key="34"
           title="¿Si la distancia que hay entre el calentador y la ducha es muy grande el agua sale mas fría?">
           Sí. La distancia entre el calentador y el punto donde se desea obtener
           agua caliente afectan la temperatura de salida. Esto sucede con
@@ -401,7 +401,7 @@ export default function FAQ() {
           saldrá a 40º C.
         </AccordionItem>
         <AccordionItem
-          key="34"
+          key="35"
           title="Mi calentador funciona muy bien por uno o dos minutos, entonces se apaga. ¿Qué puede ser?">
           Son tres las posibles causas de esta falla:
           <br />
