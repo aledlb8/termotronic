@@ -8,13 +8,6 @@ module.exports = {
     'text-green-300', 'text-blue-300', 'text-gray-300', 'text-cyan-300', 'text-red-300', 'text-yellow-300'
   ],
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
-      },
-    },
-  },
   darkMode: "class",
   plugins: [require("@tailwindcss/typography"), require('daisyui'), nextui()],
   daisyui: {
@@ -29,6 +22,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
+      },
       animation: {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },

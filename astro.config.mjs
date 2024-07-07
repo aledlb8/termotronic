@@ -23,7 +23,8 @@ export default defineConfig({
         '@components': '/src/components',
         '@layouts': '/src/layouts',
         '@pages': '/src/pages',
-        '@content': '/src/content'
+        '@content': '/src/content',
+        '@styles': '/src/styles'
       }
     }
   }
