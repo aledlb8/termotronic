@@ -264,14 +264,16 @@ export default function FAQ() {
           title="¿No es una limitación que trabaje solo con 220 voltios? ¿Por que no puedo conectarlo a 110 voltios?">
           TERMOTRONIC necesita calentar el agua instantáneamente y según circula
           por dentro de él y para obtener la potencia necesaria para este
-          trabajo debe estar conectado a una línea de 220 voltios.
+          trabajo debe estar conectado a una línea de 220 voltios. Por otro lado el CBX es multivoltaje
+          y puede operan bien dentro del rango de 90 a 240 voltios. Importante: recuerde que a menor
+          voltaje será menor la potencia y en consecuencia menos caliente el agua.
         </AccordionItem>
         <AccordionItem
           key="24"
-          title="¿Puedo conectar dos calentadores en serie?">
-          No, pero si en paralelo. En el caso de que se requieran grandes
+          title="¿Puedo conectar dos Termotronic en serie?">
+          No, pero si los puede instalar en paralelo. En el caso de que se requieran grandes
           volúmenes de agua, una instalación en paralelo de dos o más
-          calentadores es la solución.
+          Termotronic es la solución.
         </AccordionItem>
         <AccordionItem key="25" title="¿Que me cubre la garantía?">
           El TERMOTRONIC está garantizado contra cualquier defecto de fábrica,
@@ -320,6 +322,7 @@ export default function FAQ() {
           key="30"
           title="¿Puedo conectar la unidad en un circuito cerrado?">
           No lo recomendamos, Termotronic no fue diseñado para ese uso.
+          Para circuitos cerrados utilice el CBX.
         </AccordionItem>
         <AccordionItem
           key="31"
@@ -339,7 +342,7 @@ export default function FAQ() {
           <br />
           5 La tensión con que se alimenta el calentador supera en un 15% para
           la que fue diseñado.
-          <br />6 Otro equipo está conectado a la misma línea que alimenta en
+          <br />6 Otro equipo está conectado a la misma línea que alimenta el
           calentador.
         </AccordionItem>
         <AccordionItem
