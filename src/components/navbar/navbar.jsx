@@ -155,6 +155,15 @@ export default function App() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+                <NavbarItem>
+          <Link
+            className="hover:text-red-400 font-bold"
+            color="foreground"
+            href="htps://shop.termotronic.com">
+            Tienda
+          </Link>
+        </NavbarItem>
+
       </NavbarContent>
 
       <NavbarMenu>
