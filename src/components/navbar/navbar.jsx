@@ -159,7 +159,7 @@ export default function App() {
           <Link
             className="hover:text-red-400 font-bold"
             color="foreground"
-            href="htps://shop.termotronic.com">
+            href="https://shop.termotronic.com">
             Tienda
           </Link>
         </NavbarItem>
@@ -250,6 +250,15 @@ export default function App() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+                <NavbarMenuItem>
+          <Link
+            className="hover:text-red-400"
+            color="foreground"
+            href="https://shop.termotronic.com">
+            Tienda
+          </Link>
+        </NavbarMenuItem>
+
       </NavbarMenu>
     </Navbar>
   );
