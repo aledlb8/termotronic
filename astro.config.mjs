@@ -10,9 +10,9 @@ export default defineConfig({
     port: 3000
   },
   image: {
-    domains: ["termotronic.com"]
+    domains: ["www.termotronic.com", "termotronic.com"]
   },
-  site: "https://termotronic.com",
+  site: "https://www.termotronic.com",
   integrations: [tailwind(), mdx(), sitemap(), react()],
   vite: {
     assetsInclude: ['**/*.{png,jpg,gif,mp4}'],
