@@ -11,9 +11,9 @@ export const footerLinks = [
   {
     title: "Productos",
     items: [
-      { title: "Termotronic", href: "/productos/termotronic" },
-      { title: "CBX", href: "/productos/cbx" },
-      { title: "Kit", href: "/productos/kit" },
+      { title: "Calentador Termotronic", href: "/productos/termotronic" },
+      { title: "Calentador CBX", href: "/productos/cbx" },
+      { title: "Kit de Instalación", href: "/productos/kit" },
     ],
   },
   {

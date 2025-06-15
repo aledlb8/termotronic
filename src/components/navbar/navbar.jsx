@@ -82,21 +82,21 @@ export default function App() {
             }}>
             <DropdownItem
               key="termotronic"
-              description="Agua Caliente para Toda la Vida."
+              description="Duradero y confiable"
               href="/productos/termotronic">
-              Termotronic
+              Calentador Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
-              description="Básicamente perfecto."
+              description="Ecónomico y rendidor"
               href="/productos/cbx">
-              CBX
+              Calentador CBX
             </DropdownItem>
             <DropdownItem
               key="kit"
-              description="Kit de plomería e instalación."
+              description="Para una instalación perfecta"
               href="/productos/kit">
-              Kit de Instalacion
+              Kit de Instalación
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -144,13 +144,22 @@ export default function App() {
             itemClasses={{
               base: "gap-4",
             }}>
-            <DropdownItem key="servicios" href="/servicios">
+            <DropdownItem 
+            description="Centros de servicio certificado"
+            key="servicios" 
+            href="/servicios">
               Servicios
             </DropdownItem>
-            <DropdownItem key="garantia" href="/garantias">
+            <DropdownItem 
+            key="garantia" 
+            description="Donde hacer efectiva su garantía"
+            href="/garantias">
               Garantia
             </DropdownItem>
-            <DropdownItem key="manuales" href="/manuales">
+            <DropdownItem 
+            key="manuales" 
+            description="Manuales y catálogos de nuestros productos"
+            href="/manuales">
               Manuales
             </DropdownItem>
           </DropdownMenu>
@@ -187,21 +196,21 @@ export default function App() {
             }}>
             <DropdownItem
               key="termotronic"
-              description="Agua Caliente para Toda la Vida."
+              description="Duradero y confiable"
               href="/productos/termotronic">
-              Termotronic
+              Calentador Termotronic
             </DropdownItem>
             <DropdownItem
               key="cbx"
-              description="Básicamente perfecto."
+              description="Económico y rendidor"
               href="/productos/cbx">
-              CBX
+              Calentador CBX
             </DropdownItem>
             <DropdownItem
               key="kit"
-              description="Kit de plomería e instalación."
+              description="Para una instalación perfecta"
               href="/productos/kit">
-              Kit de Instalacion
+              Kit de Instalación
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -239,16 +248,25 @@ export default function App() {
             itemClasses={{
               base: "gap-4",
             }}>
-            <DropdownItem key="servicios" href="/servicios">
+            <DropdownItem 
+            description="Centros de servicio certificado"
+            key="servicios" 
+            href="/servicios">
               Servicios
             </DropdownItem>
-            <DropdownItem key="garantia" href="/garantias">
+            <DropdownItem 
+            key="garantia" 
+            description="Donde hacer efectiva su garantía"
+            href="/garantias">
               Garantia
             </DropdownItem>
-            <DropdownItem key="manuales" href="/manuales">
+            <DropdownItem 
+            key="manuales" 
+            description="Manuales y catálogos de nuestros productos"
+            href="/manuales">
               Manuales
             </DropdownItem>
-          </DropdownMenu>
+            </DropdownMenu>
         </Dropdown>
                 <NavbarMenuItem>
           <Link
