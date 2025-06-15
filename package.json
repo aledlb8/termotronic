@@ -9,7 +9,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "install": "npm install",
     "analyze": "npx rollup-plugin-visualizer dist/assets/stats.html --open"
   },
   "dependencies": {
