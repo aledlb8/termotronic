@@ -256,15 +256,19 @@ export default function FAQ() {
         <AccordionItem key="22" title="¿Que experiencia han tenido?">
           Todos los que trabajamos en TERMOTRONIC estamos muy estimulados por
           los comentarios de agradecimiento y felicitaciones de nuestros
-          clientes que día a día utilizan este novedoso sistema para calentar
-          agua.
+          clientes que utilizan nuestros productos para calentar
+          agua.<br/>
+          Después de más de 30 años en el mercado, no solo somos líderes en 
+          calentadores de agua… somos parte de la vida de quienes confían en 
+          nosotros cada día.
         </AccordionItem>
         <AccordionItem
           key="23"
           title="¿No es una limitación que trabaje solo con 220 voltios? ¿Por que no puedo conectarlo a 110 voltios?">
           TERMOTRONIC necesita calentar el agua instantáneamente y según circula
           por dentro de él y para obtener la potencia necesaria para este
-          trabajo debe estar conectado a una línea de 220 voltios. Por otro lado el CBX es multivoltaje
+          trabajo debe estar conectado a una línea de 220 voltios. 
+          <br/>Por otro lado el CBX es multivoltaje
           y puede operan bien dentro del rango de 90 a 240 voltios. Importante: recuerde que a menor
           voltaje será menor la potencia y en consecuencia menos caliente el agua.
         </AccordionItem>
@@ -342,7 +346,8 @@ export default function FAQ() {
           <br />
           5 La tensión con que se alimenta el calentador supera en un 15% para
           la que fue diseñado.
-          <br />6 Otro equipo está conectado a la misma línea que alimenta el
+          <br />
+          6 Otro equipo está conectado a la misma línea que alimenta el
           calentador.
         </AccordionItem>
         <AccordionItem
@@ -355,7 +360,7 @@ export default function FAQ() {
         </AccordionItem>
         <AccordionItem key="33" title="¿A que se refieren con instantáneo?">
           Los calentadores eléctricos tradicionales, una vez enchufados, pueden
-          tardar mas de 30 minutos en calentar el agua de su tanque. El
+          tardar más de 30 minutos en calentar el agua de su tanque. El
           TERMOTRONIC calienta el agua según va circulado por dentro de él, por
           lo tanto no es necesario esperar para poder usar el agua caliente.
         </AccordionItem>
@@ -371,17 +376,17 @@ export default function FAQ() {
           irradia este calor al ambiente, por cada tramo de tubería se “pierden”
           una determinada cantidad de calorías. A mayor cantidad de metros de
           tubería mayor es la perdida de calor.
-          <br />
+          <br /><br />
           Factores que afectan la temperatura de salida del agua:
           <br />
-          La distancia entre el calentador y el punto de uso de agua caliente:
+          - La distancia entre el calentador y el punto de uso de agua caliente:
           Un TERMOTRONIC de 11Kw. Produce 2.63 Kcalorías/seg., estas calorías se
           transfieren al agua en un 99%. Por lo tanto la pérdida es casi nula.
           Pero cuando el agua entra a la tubería que la va a transporta hasta su
           lugar de uso comienza un intercambio de calor entre el agua y la
           tubería y segundos mas tarde comienza otro intercambio de calor entre
-          la tubería y el ambiente. Estos intercambios de calor no son otra cosa
-          que pérdidas de energía (de calor en nuestro caso), los tres factores
+          la tubería y el ambiente. <br/>Estos intercambios de calor no son otra cosa
+          que pérdidas de energía (de calor en nuestro caso). Las variables
           que influyen en el porcentaje de pérdida son: el largo de la tubería,
           el material de que está hecha la tubería y el aislamiento que esta
           pueda tener. Cuanto mas larga sea la tubería que conduce el agua
@@ -394,10 +399,10 @@ export default function FAQ() {
           proporciona paga su costo varias veces. Este ahorro es mayor en zonas
           de clima frío.
           <br />
-          Caudal en uso: Cuanto mayor sea en caudal de agua menor será el
+          - Caudal en uso: Cuanto mayor sea en caudal de agua menor será el
           aumento de temperatura. Un TERMOTRONIC de 11Kw.
           <br />
-          Temperatura de entrada del agua: cuanto más alta sea la temperatura de
+          - Temperatura de entrada del agua: cuanto más alta sea la temperatura de
           entrada de agua más caliente será la temperatura de salida. Un
           calentador de 11Kw con agua circulado a 8 litros por minuto aumenta la
           temperatura del agua en 20º C, si el agua está entrado a 20º C esta
@@ -406,9 +411,9 @@ export default function FAQ() {
         <AccordionItem
           key="35"
           title="Mi calentador funciona muy bien por uno o dos minutos, entonces se apaga. ¿Qué puede ser?">
-          Son tres las posibles causas de esta falla:
+          Son tres las posibles causas de esta falla
           <br />
-          1-Baja presión en el sistema hidroneumático de su vivienda.
+          1-Baja presión en el sistema hidroneumático de su vivienda.<br />
           Soluciones:
           <br />- Aumente la presión de apagado del presostato del sistema
           hidroneumático (consulte a un especialista antes de probar esta
@@ -417,23 +422,23 @@ export default function FAQ() {
           - Coloque el selector de potencia en &quot;Med&quot;. Si la falla
           continua pase el selector a &quot;Min&quot;
           <br />
-          2-La ducha que está usando restringe mucho el agua o está tapada.
+          2-La ducha que está usando restringe mucho el agua o está tapada.<br />
           Soluciones:
           <br />- Cambie la ducha a un modelo que permita mas flujo de agua o
           limpie los orificios de salida del agua de su ducha.
           <br />- Coloque el selector de potencia en &quot;Med&quot;. Si la
           falla continua pase el selector a &quot;Min&quot;
           <br />
-          3-Tuberías de su vivienda obstruidas. (tuberías muy viejas)
+          3-Tuberías de su vivienda obstruidas. (tuberías muy viejas)<br />
           Soluciones:
           <br />
-          - Limpieza de tuberías. - Coloque el selector de potencia en
+          - Limpieza de tuberías. <br />- Coloque el selector de potencia en
           &quot;Med&quot;. Si la falla continua pase el selector a
           &quot;Min&quot;
           <br />- Aumente la presión de apagado del presostato del sistema
           hidroneumático (consulte a un especialista antes de probar esta
           sugerencia).
-          <br />
+          <br /><br />
           Explicación: cuando la cantidad de agua que circula por dentro del
           TERMOTRONIC muy reducida (ya sea por baja presión o por tuberías
           obstruidas) esta puede llegar a 80º C, en este momento el sistema de
