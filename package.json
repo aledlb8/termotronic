@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "install": "npm install"
+    "install": "npm install",
+    "analyze": "npx rollup-plugin-visualizer dist/assets/stats.html --open"
   },
   "dependencies": {
     "@astrojs/mdx": "^1.1.5",
@@ -31,11 +32,13 @@
     "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sharp": "^0.33.3",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.4"
   },
   "devDependencies": {
-    "daisyui": "^4.10.2"
+    "astro-compress": "^2.3.8",
+    "daisyui": "^4.10.2",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "sharp": "^0.34.2"
   }
 }

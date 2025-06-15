@@ -1,0 +1,39 @@
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
+import compress from "astro-compress";
+
+export default defineConfig({
+  server: {
+    port: 3000
+  },
+  image: {
+    domains: ["www.termotronic.com", "termotronic.com"]
+  },
+  site: "https://www.termotronic.com",
+  integrations: [tailwind(), mdx(), sitemap(), react(), compress()],
+  build: {
+    inlineStylesheets: "auto",
+    assets: "_astro"
+  },
+  vite: {
+    assetsInclude: ["**/*.{png,jpg,gif,mp4}"],
+    build: {
+      minify: "esbuild",
+      cssCodeSplit: true
+    },
+    resolve: {
+      alias: {
+        "@lib": "/src/lib",
+        "@utils": "/src/utils",
+        "@components": "/src/components",
+        "@layouts": "/src/layouts",
+        "@pages": "/src/pages",
+        "@content": "/src/content",
+        "@styles": "/src/styles"
+      }
+    }
+  }
+});
