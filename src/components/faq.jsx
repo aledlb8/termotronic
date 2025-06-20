@@ -70,8 +70,8 @@ export default function FAQ() {
           grande sea un calentador con tanque más energía desperdicia.
           <br />
           Ejemplo: Comparemos un calentador con tanque de 80 litros con
-          resistencia de 2000 vatios (2kw) con un Termotronic de 11000 vatios
-          (11kw.) instalados en una vivienda donde cohabitan 4 personas. El
+          resistencia de 2000 vatios (2kw) con un Termotronic de 12000 vatios
+          (12kw.) instalados en una vivienda donde cohabitan 4 personas. El
           calentador tradicional está encendido unas 10 horas al día, ya sea
           porque alguien está usado agua caliente, porque alguien uso agua
           caliente y el tanque perdió temperatura o por que se enfrió el agua de
@@ -81,7 +81,7 @@ export default function FAQ() {
           Ahora en el caso del Termotronic, como únicamente se enciende cuando
           alguien está usando el agua caliente, estas cuatro personas se duchan
           cada una en 15 minutos, para un total de una hora de uso. 1 hora por
-          11000 vatios son 11000 vatios (11kw) consumidos en un día (330kw/hora
+          12000 vatios son 12000 vatios (12kw) consumidos en un día (400kw/hora
           mensual).
           <br />
           En este ejemplo el ahorro es de un 55%. El ahorro aumenta en zonas de
@@ -149,12 +149,12 @@ export default function FAQ() {
           <img src="/images/data.png" />
           Temperatura de entrada del agua: cuanto más alta sea la temperatura de
           entrada de agua más caliente será la temperatura de salida. Un
-          calentador de 11Kw con agua circulado a 8 litros por minuto aumenta la
+          calentador de 12Kw con agua circulado a 8 litros por minuto aumenta la
           temperatura del agua en 20º C, si el agua está entrado a 20º C esta
           saldrá a 40º C.
           <br />
           La distancia entre el calentador y el punto de uso de agua caliente:
-          Un TERMOTRONIC de 11Kw. Produce 2.63 Kcalorías/seg, estas calorías se
+          Un TERMOTRONIC de 12Kw. Produce 2.63 Kcalorías/seg, estas calorías se
           transfieren al agua en un 99%. Por lo tanto la pérdida es casi nula.
           Pero cuando el agua entra a la tubería que la va a transporta hasta su
           lugar de uso comienza un intercambio de calor entre el agua y la
@@ -217,7 +217,7 @@ export default function FAQ() {
         </AccordionItem>
         <AccordionItem key="17" title="¿Tienen varias capacidades?">
           El CBX está equipado con un selector de potencia. Con un simple ajuste
-          se puede seleccionar entre 11Kw, 8.2Kw o 5.5Kw según la siguiente
+          se puede seleccionar entre 12Kw, 8.2Kw o 5.5Kw según la siguiente
           tabla.
           <br />
           Control de potencia:
@@ -225,7 +225,7 @@ export default function FAQ() {
           Selector de potencia Potencia máxima | @ 208 V AC | Cable sugerido |
           Breaker sugerido
           <br />
-          Max 11Kw (53 Amp) 8 THHN 60 Amp
+          Max 12Kw (53 Amp) 8 THHN 60 Amp
           <br />
           Med 8,2Kw (40 Amp) 10 THHN * 50 Amp
           <br />
@@ -380,7 +380,7 @@ export default function FAQ() {
           Factores que afectan la temperatura de salida del agua:
           <br />
           - La distancia entre el calentador y el punto de uso de agua caliente:
-          Un TERMOTRONIC de 11Kw. Produce 2.63 Kcalorías/seg., estas calorías se
+          Un TERMOTRONIC de 12Kw. Produce 2.63 Kcalorías/seg., estas calorías se
           transfieren al agua en un 99%. Por lo tanto la pérdida es casi nula.
           Pero cuando el agua entra a la tubería que la va a transporta hasta su
           lugar de uso comienza un intercambio de calor entre el agua y la
@@ -400,11 +400,11 @@ export default function FAQ() {
           de clima frío.
           <br />
           - Caudal en uso: Cuanto mayor sea en caudal de agua menor será el
-          aumento de temperatura. Un TERMOTRONIC de 11Kw.
+          aumento de temperatura. Un TERMOTRONIC de 12Kw.
           <br />
           - Temperatura de entrada del agua: cuanto más alta sea la temperatura de
           entrada de agua más caliente será la temperatura de salida. Un
-          calentador de 11Kw con agua circulado a 8 litros por minuto aumenta la
+          calentador de 12Kw con agua circulado a 8 litros por minuto aumenta la
           temperatura del agua en 20º C, si el agua está entrado a 20º C esta
           saldrá a 40º C.
         </AccordionItem>

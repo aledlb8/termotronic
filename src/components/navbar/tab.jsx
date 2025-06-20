@@ -5,14 +5,16 @@ export default function TabsComponent({ product }) {
     termotronic: {
       caracteristicas: `
         Los Termotronic son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda.<br />
-        Su capacidad es de 11 Kw, suficiente para una abundante ducha.<br /><br />
+        Su capacidad es de 12 Kw, suficiente para una abundante ducha.<br /><br />
         
         Beneficios:<br />
         - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.<br />
         - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.<br />
         - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.<br />
         - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.<br />
-        - Agua caliente ilimitada: El agua caliente nunca se agota.
+        - Agua caliente ilimitada: El agua caliente nunca se agota. <br />
+        - Confiabilidad: Rigurosos controles de calidad durante su fabricación aseguran años de uso. <br />
+        - Ecológicos: Además de ahorrar energía son fabricados con materials reciclados y 98% reciclables.
       `,
       especificaciones: `
         <table>
@@ -34,14 +36,16 @@ export default function TabsComponent({ product }) {
     cbx: {
       caracteristicas: `
         Los CBX son calentadores eléctricos de agua instantáneos que ofrecen agua caliente ilimitada a demanda.<br />
-        Su capacidad es de 11 Kw suficiente para una abundante ducha con agua caliente.<br /><br />
+        Su capacidad es de 12 Kw suficiente para una abundante ducha con agua caliente.<br /><br />
 
         Beneficios:<br />
         - Agua caliente instantánea: No hay que esperar a que se caliente un tanque de agua.<br />
         - Ahorro de energía: Solo consumen energía cuando se está utilizando agua caliente.<br />
         - Ahorro de espacio: Son compactos y se pueden instalar en cualquier lugar.<br />
-        - Durabilidad: Están fabricados con materiales de alta calidad para una larga vida útil.<br />
-        - Agua caliente ilimitada: El agua caliente nunca se agota.
+        - Económicos: Es el equipo de 12Kw más económico del mercado.<br />
+        - Agua caliente ilimitada: El agua caliente nunca se agota. <br />
+        - Garantizados: Tenemos la mejor garantía y centros de servico en toda Venezuela.<br />
+        - Ecológicos: Además de ahorrar energía son fabricados con materials reciclados y 98% reciclables.
       `,
       especificaciones: `
         <table>
