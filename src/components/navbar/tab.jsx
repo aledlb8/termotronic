@@ -61,7 +61,103 @@ export default function TabsComponent({ product }) {
           <tr><td>Potencia (@220V)</td><td>4.000 W Min – 8.000 W Med - 12.000 W Max</td></tr> 
           <tr><td>Dimensiones</td><td>370 mm X 180 mm X 90 mm</td></tr>
           <tr><td>Peso</td><td>3.9 Kg</td></tr>
-        </table>
+        </table><br />
+<table >
+  <thead>
+         <tr><th>Tabla de potencias, consumos y calibre recomendado (con el selector en MAX)</th></tr> 
+  </thead>
+</table>        
+<table >
+    <thead>
+    <tr>
+      <th style="width: 80px; text-align: left;">V AC</th>
+      <th style="width: 100px; text-align: left;">Vatios</th>
+      <th style="width: 80px; text-align: left;">Amp</th>
+      <th style="width: 120px; text-align: left;">AWG (THHN)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>240</td>
+      <td>14 Kw</td>
+      <td>61</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>220</td>
+      <td>12 Kw</td>
+      <td>56</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>208</td>
+      <td>11 Kw</td>
+      <td>53</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td>3.7 Kw</td>
+      <td>31</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>3 Kw</td>
+      <td>30</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table><br />
+<table >
+  <thead>
+         <tr><th>Potencias variando el selector (en Kw)</th></tr> 
+  </thead>
+</table>        
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 80px; text-align: left;">Voltios</th>
+      <th style="width: 100px; text-align: left;">MAX</th>
+      <th style="width: 100px; text-align: left;">MED</th>
+      <th style="width: 100px; text-align: left;">MIN</th>
+    </tr>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>240V</td>
+      <td>14.6</td>
+      <td>9.7</td>
+      <td>4.8Kw</td>
+    </tr>
+    <tr>
+      <td>220V</td>
+      <td>12</td>
+      <td>8</td>
+      <td>4Kw</td>
+    </tr>
+    <tr>
+      <td>208V</td>
+      <td>11.2</td>
+      <td>7.3</td>
+      <td>3.6Kw</td>
+    </tr>
+    <tr>
+      <td>120V</td>
+      <td>3.7</td>
+      <td>2.5</td>
+      <td>1.2Kw</td>
+    </tr>
+    <tr>
+      <td>110V</td>
+      <td>3.3</td>
+      <td>2.2</td>
+      <td>1.1Kw</td>
+    </tr>
+  </tbody>
+</table> 
       `,
     },
 
