@@ -24,7 +24,7 @@ export default function TabsComponent({ product }) {
           <tr><td>Rango de Trabajo</td><td>10 PSI Min. a 150 PSI Max.</td></tr>
           <tr><td>Flujo mínimo</td><td>1.5 LPM</td></tr>
           <tr><td>Eficiencia</td><td>99%</td></tr>
-          <tr><td>Materiales</td><td>Cobre y Acero</td></tr>
+          <tr><td>Materiales</td><td>Cobre y Acero</td></tr> 
           <tr><td>Conexiones de Agua</td><td>FLARE 1/2”</td></tr>
           <tr><td>Potencia (@220V)</td><td>12.000 Vatios</td></tr>
           <tr><td>Dimensiones</td><td>370 mm X 180 mm X 90 mm</td></tr>
@@ -64,7 +64,7 @@ export default function TabsComponent({ product }) {
         </table><br />
 <table >
   <thead>
-         <tr><th>Tabla de potencias, consumos y calibre recomendado (con el selector en MAX)</th></tr> 
+         <tr><th>Tabla de potencias, consumos y calibre recomendado (con el selector en MAX) </th></tr> 
   </thead>
 </table>        
 <table >
