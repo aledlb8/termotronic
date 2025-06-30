@@ -168,7 +168,7 @@ export default function App() {
           <Link
             className="hover:text-red-400 font-bold"
             color="foreground"
-            href="https://shop.termotronic.com">
+            href="https://shop.termotronic.com"  target="_blank" rel="noopener noreferrer">
             Tienda
           </Link>
         </NavbarItem>
