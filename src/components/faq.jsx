@@ -257,9 +257,9 @@ export default function FAQ() {
           Todos los que trabajamos en TERMOTRONIC estamos muy estimulados por
           los comentarios de agradecimiento y felicitaciones de nuestros
           clientes que utilizan nuestros productos para calentar
-          agua.<br/>
-          Después de más de 30 años en el mercado, no solo somos líderes en 
-          calentadores de agua… somos parte de la vida de quienes confían en 
+          agua.<br />
+          Después de más de 30 años en el mercado, no solo somos líderes en
+          calentadores de agua… somos parte de la vida de quienes confían en
           nosotros cada día.
         </AccordionItem>
         <AccordionItem
@@ -267,8 +267,8 @@ export default function FAQ() {
           title="¿No es una limitación que trabaje solo con 220 voltios? ¿Por que no puedo conectarlo a 110 voltios?">
           TERMOTRONIC necesita calentar el agua instantáneamente y según circula
           por dentro de él y para obtener la potencia necesaria para este
-          trabajo debe estar conectado a una línea de 220 voltios. 
-          <br/>Por otro lado el CBX es multivoltaje
+          trabajo debe estar conectado a una línea de 220 voltios.
+          <br />Por otro lado el CBX es multivoltaje
           y puede operan bien dentro del rango de 90 a 240 voltios. Importante: recuerde que a menor
           voltaje será menor la potencia y en consecuencia menos caliente el agua.
         </AccordionItem>
@@ -385,7 +385,7 @@ export default function FAQ() {
           Pero cuando el agua entra a la tubería que la va a transporta hasta su
           lugar de uso comienza un intercambio de calor entre el agua y la
           tubería y segundos mas tarde comienza otro intercambio de calor entre
-          la tubería y el ambiente. <br/>Estos intercambios de calor no son otra cosa
+          la tubería y el ambiente. <br />Estos intercambios de calor no son otra cosa
           que pérdidas de energía (de calor en nuestro caso). Las variables
           que influyen en el porcentaje de pérdida son: el largo de la tubería,
           el material de que está hecha la tubería y el aislamiento que esta

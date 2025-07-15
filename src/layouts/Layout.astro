@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.jsx";
+import ChatBubble from "@components/chat-bubble.astro";
 import "@fontsource-variable/inter/index.css";
 
 export interface Props {
@@ -13,21 +14,31 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
   "https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png",
-  Astro.site
+  Astro.site,
 ).toString();
 
 const { title, description } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png" rel="icon" /> 
-    <link rel="icon" type="image/png" href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png"> 
+    <link
+      href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png"
+      rel="icon"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://shop.termotronic.com/image/catalog/TermotronicIco16x16.png"
+    />
     <meta name="generator" content={Astro.generator} />
 
     <SEO
@@ -48,12 +59,10 @@ const { title, description } = Astro.props;
     />
   </head>
   <body>
-
-    
-
     <Navbar client:load />
     <slot />
     <Footer />
+    <ChatBubble chatUrl="https://wa.me/584142821856" />
     <style is:global>
       /* Improve Page speed */
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */

@@ -144,31 +144,31 @@ export default function App() {
             itemClasses={{
               base: "gap-4",
             }}>
-            <DropdownItem 
-            description="Centros de servicio certificado"
-            key="servicios" 
-            href="/servicios">
+            <DropdownItem
+              description="Centros de servicio certificado"
+              key="servicios"
+              href="/servicios">
               Servicios
             </DropdownItem>
-            <DropdownItem 
-            key="garantia" 
-            description="Donde hacer efectiva su garantía"
-            href="/garantias">
+            <DropdownItem
+              key="garantia"
+              description="Donde hacer efectiva su garantía"
+              href="/garantias">
               Garantia
             </DropdownItem>
-            <DropdownItem 
-            key="manuales" 
-            description="Manuales y catálogos de nuestros productos"
-            href="/manuales">
+            <DropdownItem
+              key="manuales"
+              description="Manuales y catálogos de nuestros productos"
+              href="/manuales">
               Manuales
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
-                <NavbarItem>
+        <NavbarItem>
           <Link
             className="hover:text-red-400 font-bold"
             color="foreground"
-            href="https://shop.termotronic.com"  target="_blank" rel="noopener noreferrer">
+            href="https://shop.termotronic.com" target="_blank" rel="noopener noreferrer">
             Tienda
           </Link>
         </NavbarItem>
@@ -248,27 +248,27 @@ export default function App() {
             itemClasses={{
               base: "gap-4",
             }}>
-            <DropdownItem 
-            description="Centros de servicio certificado"
-            key="servicios" 
-            href="/servicios">
+            <DropdownItem
+              description="Centros de servicio certificado"
+              key="servicios"
+              href="/servicios">
               Servicios
             </DropdownItem>
-            <DropdownItem 
-            key="garantia" 
-            description="Donde hacer efectiva su garantía"
-            href="/garantias">
+            <DropdownItem
+              key="garantia"
+              description="Donde hacer efectiva su garantía"
+              href="/garantias">
               Garantia
             </DropdownItem>
-            <DropdownItem 
-            key="manuales" 
-            description="Manuales y catálogos de nuestros productos"
-            href="/manuales">
+            <DropdownItem
+              key="manuales"
+              description="Manuales y catálogos de nuestros productos"
+              href="/manuales">
               Manuales
             </DropdownItem>
-            </DropdownMenu>
+          </DropdownMenu>
         </Dropdown>
-                <NavbarMenuItem>
+        <NavbarMenuItem>
           <Link
             className="hover:text-red-400"
             color="foreground"

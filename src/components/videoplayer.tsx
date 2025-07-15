@@ -1,9 +1,44 @@
 import { useState, useRef, useEffect } from 'react';
 
-const VideoPlayer = () => {
+interface VideoPlayerProps {
+    videoSrc?: string;
+    gifSrc?: string;
+    useResponsiveVideo?: boolean;
+    showAsButton?: boolean;
+    buttonText?: string;
+}
+
+const VideoPlayer = ({
+    videoSrc = "https://media.termotronic.com/Redes/2025/Videos/20A%C3%B1os%2Emp4",
+    gifSrc = "/videos/video.gif",
+    useResponsiveVideo = false,
+    showAsButton = false,
+    buttonText = "Ver Video Explicativo"
+}: VideoPlayerProps) => {
     const [showModal, setShowModal] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
+    const [isLargeScreen, setIsLargeScreen] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (useResponsiveVideo) {
+            const checkScreenSize = () => {
+                setIsLargeScreen(window.innerWidth >= 1024);
+            };
+
+            checkScreenSize();
+            window.addEventListener('resize', checkScreenSize);
+
+            return () => window.removeEventListener('resize', checkScreenSize);
+        }
+    }, [useResponsiveVideo]);
+
+    const getVideoSource = () => {
+        if (useResponsiveVideo) {
+            return isLargeScreen ? "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FHoriz%5F1080p%2Emp4" : "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FVert%5F1080p%2Emp4";
+        }
+        return videoSrc;
+    };
 
     const handleVideoClick = () => {
         setShowModal(true);
@@ -45,7 +80,7 @@ const VideoPlayer = () => {
 
     return (
         <>
-            {showModal ? (
+            {showModal && (
                 <div
                     style={{
                         position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
@@ -60,13 +95,25 @@ const VideoPlayer = () => {
                         onClick={(e) => e.stopPropagation()}
                         style={{ maxHeight: '70vh', width: 'auto' }}
                     >
-                        <source src="/videos/video.mp4" type="video/mp4" />
+                        <source src={getVideoSource()} type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
+            )}
+
+            {showAsButton ? (
+                <button
+                    onClick={handleVideoClick}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
+                >
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                    </svg>
+                    {buttonText}
+                </button>
             ) : (
                 <img
-                    src="/videos/video.gif"
+                    src={gifSrc}
                     className='rounded-xl'
                     style={{ width: '100%', cursor: 'pointer' }}
                     alt="Click to play video"
