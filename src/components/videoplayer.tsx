@@ -1,27 +1,38 @@
 import { useState, useRef, useEffect } from 'react';
 
+interface ResponsiveVideoSources {
+    desktop: string;
+    mobile: string;
+}
+
 interface VideoPlayerProps {
-    videoSrc?: string;
+    videoSrc?: string | ResponsiveVideoSources;
     gifSrc?: string;
-    useResponsiveVideo?: boolean;
     showAsButton?: boolean;
     buttonText?: string;
+    className?: string;
+    imgClassName?: string;
+    buttonClassName?: string;
 }
 
 const VideoPlayer = ({
     videoSrc = "https://media.termotronic.com/Redes/2025/Videos/20A%C3%B1os%2Emp4",
     gifSrc = "/videos/video.gif",
-    useResponsiveVideo = false,
     showAsButton = false,
-    buttonText = "Ver Video Explicativo"
+    buttonText = "Ver Video Explicativo",
+    className = "",
+    imgClassName = "rounded-xl",
+    buttonClassName = "inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
 }: VideoPlayerProps) => {
     const [showModal, setShowModal] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
     const [isLargeScreen, setIsLargeScreen] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
+    const isResponsiveVideo = typeof videoSrc === 'object' && videoSrc !== null;
+
     useEffect(() => {
-        if (useResponsiveVideo) {
+        if (isResponsiveVideo) {
             const checkScreenSize = () => {
                 setIsLargeScreen(window.innerWidth >= 1024);
             };
@@ -31,13 +42,13 @@ const VideoPlayer = ({
 
             return () => window.removeEventListener('resize', checkScreenSize);
         }
-    }, [useResponsiveVideo]);
+    }, [isResponsiveVideo]);
 
     const getVideoSource = () => {
-        if (useResponsiveVideo) {
-            return isLargeScreen ? "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FHoriz%5F1080p%2Emp4" : "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FVert%5F1080p%2Emp4";
+        if (isResponsiveVideo && typeof videoSrc === 'object') {
+            return isLargeScreen ? videoSrc.desktop : videoSrc.mobile;
         }
-        return videoSrc;
+        return typeof videoSrc === 'string' ? videoSrc : "";
     };
 
     const handleVideoClick = () => {
@@ -101,25 +112,27 @@ const VideoPlayer = ({
                 </div>
             )}
 
-            {showAsButton ? (
-                <button
-                    onClick={handleVideoClick}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105"
-                >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                    </svg>
-                    {buttonText}
-                </button>
-            ) : (
-                <img
-                    src={gifSrc}
-                    className='rounded-xl'
-                    style={{ width: '100%', cursor: 'pointer' }}
-                    alt="Click to play video"
-                    onClick={handleVideoClick}
-                />
-            )}
+            <div className={className}>
+                {showAsButton ? (
+                    <button
+                        onClick={handleVideoClick}
+                        className={buttonClassName}
+                    >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                        </svg>
+                        {buttonText}
+                    </button>
+                ) : (
+                    <img
+                        src={gifSrc}
+                        className={imgClassName}
+                        style={{ width: '100%', cursor: 'pointer' }}
+                        alt="Click to play video"
+                        onClick={handleVideoClick}
+                    />
+                )}
+            </div>
         </>
     );
 }

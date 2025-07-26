@@ -23,11 +23,14 @@ import VideoPlayer from "@components/videoplayer";
       sistema le brinda básicamente cinco ventajas sobre un calentador tradicional:
       <br />
       <div class="not-prose my-8 flex justify-center">
-        <VideoPlayer
-          useResponsiveVideo={true}
+        <VideoPlayer 
+          videoSrc={{
+            desktop: "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FHoriz%5F1080p%2Emp4",
+            mobile: "https://media.termotronic.com/Redes/2025/Videos/Como%5FLlega%5FVert%5F1080p%2Emp4"
+          }}
           showAsButton={true}
           buttonText="Ver Video Explicativo"
-          client:load
+          client:load 
         />
       </div>
       <section id="espacio">
