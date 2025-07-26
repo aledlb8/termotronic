@@ -1,6 +1,7 @@
 ---
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
+import VideoPlayer from "@components/videoplayer";
 ---
 
 <Layout
@@ -42,5 +43,17 @@ import Layout from "@layouts/Layout.astro";
       Por un futuro sustentable: elige productos que combinan innovación con cuidado
       ambiental.
     </div>
+
+      <div class="not-prose my-8 flex justify-center">
+        <VideoPlayer 
+          videoSrc={{
+            desktop: "https://media.termotronic.com/Redes/2025/Videos/Nacional%2DHor%5F1080p%5FWhatsApp.mp4",
+            mobile: "https://media.termotronic.com/Redes/2025/Videos/Nacional%2DVer%5F1080p%5FWhatsApp.mp4"
+          }}
+          showAsButton={true}
+          buttonText="Orgullo Nacional"
+          client:load 
+        />
+      </div>
   </Container>
 </Layout>

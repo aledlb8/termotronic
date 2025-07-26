@@ -4,6 +4,7 @@ import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 import TabsComponent from "@components/navbar/tab";
 import AnimatedBackground from "./termotronic";
+import VideoPlayer from "@components/videoplayer";
 ---
 
 <Layout
@@ -26,7 +27,18 @@ import AnimatedBackground from "./termotronic";
         </a>
       </h1>
     </Sectionhead>
-
     <TabsComponent client:load product="termotronic" />
+          <div class="not-prose my-8 flex justify-center">
+        <VideoPlayer 
+          videoSrc={{
+            desktop: "https://media.termotronic.com/Redes/2025/Videos/Nacional%2DHor%5F1080p%5FWhatsApp.mp4",
+            mobile: "https://media.termotronic.com/Redes/2025/Videos/Nacional%2DVer%5F1080p%5FWhatsApp.mp4"
+          }}
+          showAsButton={true}
+          buttonText="Orgullo Nacional"
+          client:load 
+        />
+      </div>
+
   </Container>
 </Layout>
