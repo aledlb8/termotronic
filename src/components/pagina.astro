@@ -1,5 +1,12 @@
 ---
 import Container from "@components/container.astro";
+import { leerCentrosServicio } from "../utils/centrosServicio.js";
+
+// Leer y organizar centros de servicio
+const centrosPorEstado = leerCentrosServicio();
+
+// Ordenar estados alfabéticamente
+const estadosOrdenados = Object.keys(centrosPorEstado).sort();
 ---
 
 <Container>
@@ -21,79 +28,44 @@ import Container from "@components/container.astro";
       Centros de Servicio Autorizados
     </h1>
     <br />
-    <p class="font-bold text-xl">Gran Caracas</p>
-    <p class="font-bold">Comercial JAB</p>
-    Av Ppal de Los Ruices,Edif Centro Corporativo Los Ruices
-    <br />
-    PB Local C02 - Frente al SENIAT
-    <br />
-    Caracas Edo Miranda
-    <br />
-    212-2326160
 
-    <br />
-    <br />
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+      {estadosOrdenados.map(estado => (
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">{estado.toUpperCase()}</h2>
+          
+          {Object.keys(centrosPorEstado[estado])
+            .sort()
+            .map(ciudad => (
+              <div class="mb-6">
+                {Object.keys(centrosPorEstado[estado]).length > 1 && (
+                  <h3 class="text-xl font-semibold text-gray-700 mb-3">{ciudad}</h3>
+                )}
+                
+                {centrosPorEstado[estado][ciudad]
+                  .sort((a, b) => a.nombre.localeCompare(b.nombre))
+                  .map((centro) => (
+                    <div class="mb-4 p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
+                      <h4 class="text-lg font-semibold text-gray-800 leading-none m-0">
+                        {centro.nombre}
+                      </h4>
+                      <p class="text-gray-600 leading-none m-0">
+                        {centro.direccion}
+                      </p>
+                      <p class="text-gray-600 leading-none m-0">
+                        {centro.ciudad} Edo {centro.estado}
+                      </p>
+                      <p class="text-green-600 font-medium leading-none m-0">
+                        {centro.telefonos}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+            ))}
+        </div>
+      ))}
+    </div>
 
-    <p class="font-bold">Termocenter</p>
-    Centro Comercial Santa FE
-    <br />
-    Caracas Edo Miranda
-    <br />
-    0414-778.4090
-
-    <br />
-    <br />
-    <p class="font-bold">Termocenter</p>
-    Av Páez El Paraiso Edif Verónica
-    <br />
-    Caracas Distrito Capital
-    <br />
-    0414-778.4090
-
-    <br />
-    <br />
-
-    <p class="font-bold text-xl">Valencia</p>
-    <p class="font-bold">Multibrands Latina Valencia</p>
-    Av Bolivar Norte Urb. El Recreo calle #158 N97-106
-    <br />
-    Valencia Edo Carabobo
-    <br />
-    0424-461.0357 0424-461.0269
-
-    <br />
-    <br />
-
-    <p class="font-bold text-xl">Maracay</p>
-    <p class="font-bold">Multibrands Latina Maracay</p>
-    Av las Delicias, Centro Empresarial Europa local PB30
-    <br />
-    Maracay Edo Aragua
-    <br />
-    0243-2413697 0414-4964031
-
-    <br />
-    <br />
-
-    <p class="font-bold text-xl">Barcelona</p>
-    <p class="font-bold">Monigas Oriente</p>
-    Av Costanera - C.C. Camino Real
-    <br />
-    PB - Local 8 - Barcelona
-    <br />
-    424-874.9332
-
-    <br />
-    <br />
-
-    <p class="font-bold text-xl">Maracaibo</p>
-    <p class="font-bold">Instavenca</p>
-    Av 79 Casa Nro 93-48 <br />
-    Urb Santa Fe I <br />
-    Maracaibo Edo Zulia <br />
-    424-874.9332
-    <br />
-    <br />
     <br />
     <br />
     <h2 class="text-xl lg:text-2xl lg:tracking-tight">
