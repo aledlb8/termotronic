@@ -38,51 +38,19 @@ const estadosOrdenados = Object.keys(distribuidoresPorEstado).sort();
                 )}
                 
                 {distribuidoresPorEstado[estado][ciudad].map((distribuidor) => (
-                  <div class="flex flex-row space-x-4 mb-6 p-4 border-l-4 border-blue-500 bg-gray-50 rounded-r-lg">
-                    <div class="flex-1">
-                      <h4 class="text-lg font-semibold text-gray-800 mb-2">
-                        {distribuidor.nombre}
-                      </h4>
-                      <p class="text-gray-600 mb-1">
-                        {distribuidor.direccion}
-                      </p>
-                      <p class="text-gray-600 mb-2">
-                        {distribuidor.ciudad}, {distribuidor.estado}
-                      </p>
-                      <p class="text-blue-600 font-medium">
-                        {distribuidor.telefonos}
-                      </p>
-                    </div>
-                    
-                    {distribuidor.esAutorizado && (
-                      <div class="flex flex-col items-center mr-2 mt-2 space-y-2">
-                        <img 
-                          src="/images/centroautorizado.jpg" 
-                          alt="Centro Autorizado" 
-                          class="w-16 h-auto"
-                        />
-                        
-                        {distribuidor.instagram && (
-                          <a 
-                            href={`https://www.instagram.com/${distribuidor.instagram}/`} 
-                            target="_blank"
-                            class="text-pink-500 hover:text-pink-600 transition-colors"
-                          >
-                            <Icon class="h-6 w-6" name="simple-icons:instagram" />
-                          </a>
-                        )}
-                        
-                        {distribuidor.website && (
-                          <a 
-                            href={`https://${distribuidor.website}`} 
-                            target="_blank"
-                            class="text-blue-500 hover:text-blue-600 transition-colors"
-                          >
-                            <Icon class="h-6 w-6" name="simple-icons:web" />
-                          </a>
-                        )}
-                      </div>
-                    )}
+                  <div class="mb-4 p-4 border-l-4 border-blue-500 bg-gray-50 rounded-r-lg">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                      {distribuidor.nombre}
+                    </h4>
+                    <p class="text-gray-600 mb-1">
+                      {distribuidor.direccion}
+                    </p>
+                    <p class="text-gray-600 mb-2">
+                      {distribuidor.ciudad} Edo {distribuidor.estado}
+                    </p>
+                    <p class="text-blue-600 font-medium">
+                      {distribuidor.telefonos}
+                    </p>
                   </div>
                 ))}
               </div>
