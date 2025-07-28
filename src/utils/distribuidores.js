@@ -1,5 +1,4 @@
 import { readFileSync } from 'fs';
-import { join } from 'path';
 
 /**
  * @typedef {Object} Distribuidor
@@ -39,7 +38,7 @@ export function leerDistribuidores() {
  */
 function parsearDistribuidores(contenido) {
   const lineas = contenido.split('\n');
-  const distribuidores: DistribuidoresPorEstado = {};
+  const distribuidores = {};
   
   let i = 0;
   let dentroDeListado = false;
@@ -111,7 +110,9 @@ function parsearDistribuidores(contenido) {
       }
       
       // Parsear ciudad y estado
-      const { ciudad, estado } = parsearCiudadEstado(ciudadEstado);
+      const resultado = parsearCiudadEstado(ciudadEstado);
+      const ciudad = resultado.ciudad;
+      const estado = resultado.estado;
       
       if (nombre && ciudad && estado) {
         // Inicializar estructura si no existe
