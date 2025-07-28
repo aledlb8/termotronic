@@ -1,24 +1,26 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
-export interface Distribuidor {
-  nombre: string;
-  direccion: string;
-  ciudad: string;
-  estado: string;
-  telefonos: string;
-  esAutorizado?: boolean;
-  instagram?: string;
-  website?: string;
-}
+/**
+ * @typedef {Object} Distribuidor
+ * @property {string} nombre
+ * @property {string} direccion
+ * @property {string} ciudad
+ * @property {string} estado
+ * @property {string} telefonos
+ * @property {boolean} [esAutorizado]
+ * @property {string} [instagram]
+ * @property {string} [website]
+ */
 
-export interface DistribuidoresPorEstado {
-  [estado: string]: {
-    [ciudad: string]: Distribuidor[];
-  };
-}
+/**
+ * @typedef {Object.<string, Object.<string, Distribuidor[]>>} DistribuidoresPorEstado
+ */
 
-export function leerDistribuidores(): DistribuidoresPorEstado {
+/**
+ * @returns {DistribuidoresPorEstado}
+ */
+export function leerDistribuidores() {
   try {
     // Leer el archivo desde la ruta especificada
     const filePath = '/home/debian/termotronic/whatsappbot/knowledge/Distribuidores.txt';
@@ -31,7 +33,11 @@ export function leerDistribuidores(): DistribuidoresPorEstado {
   }
 }
 
-function parsearDistribuidores(contenido: string): DistribuidoresPorEstado {
+/**
+ * @param {string} contenido
+ * @returns {DistribuidoresPorEstado}
+ */
+function parsearDistribuidores(contenido) {
   const lineas = contenido.split('\n');
   const distribuidores: DistribuidoresPorEstado = {};
   
@@ -138,7 +144,11 @@ function parsearDistribuidores(contenido: string): DistribuidoresPorEstado {
   return distribuidores;
 }
 
-function parsearCiudadEstado(ciudadEstado: string): { ciudad: string; estado: string } {
+/**
+ * @param {string} ciudadEstado
+ * @returns {{ciudad: string, estado: string}}
+ */
+function parsearCiudadEstado(ciudadEstado) {
   if (!ciudadEstado.includes('Edo ')) {
     return { ciudad: '', estado: '' };
   }
@@ -150,7 +160,11 @@ function parsearCiudadEstado(ciudadEstado: string): { ciudad: string; estado: st
   return { ciudad, estado };
 }
 
-function esDistribuidorAutorizado(nombre: string): boolean {
+/**
+ * @param {string} nombre
+ * @returns {boolean}
+ */
+function esDistribuidorAutorizado(nombre) {
   // Basado en tu archivo original, estos son centros autorizados
   const autorizados = [
     'Comercializadora JAB',
@@ -165,9 +179,13 @@ function esDistribuidorAutorizado(nombre: string): boolean {
   );
 }
 
-function extraerInstagram(nombre: string): string | undefined {
+/**
+ * @param {string} nombre
+ * @returns {string|undefined}
+ */
+function extraerInstagram(nombre) {
   // Mapeo de nombres a Instagram basado en tu archivo original
-  const instagrams: { [key: string]: string } = {
+  const instagrams = {
     'Comercializadora JAB': 'somosjab',
     'Distribuidora TermoCenter': 'termocenter.ve',
     'Multibrands Latina': 'multibrands_latina',
@@ -184,7 +202,11 @@ function extraerInstagram(nombre: string): string | undefined {
   return undefined;
 }
 
-function extraerWebsite(nombre: string): string | undefined {
+/**
+ * @param {string} nombre
+ * @returns {string|undefined}
+ */
+function extraerWebsite(nombre) {
   if (nombre.toLowerCase().includes('multibrands latina')) {
     return 'multibrandslatina.com';
   }

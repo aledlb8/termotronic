@@ -5,14 +5,10 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
 import Cta from "@components/cta.astro";
 import Contact from "@components/contact.astro";
-import {
-  leerDistribuidores,
-  type DistribuidoresPorEstado,
-  type Distribuidor,
-} from "../utils/distribuidores.js";
+import { leerDistribuidores } from "../utils/distribuidores.js";
 
 // Leer y organizar distribuidores
-const distribuidoresPorEstado: DistribuidoresPorEstado = leerDistribuidores();
+const distribuidoresPorEstado = leerDistribuidores();
 
 // Ordenar estados alfabéticamente
 const estadosOrdenados = Object.keys(distribuidoresPorEstado).sort();
@@ -29,81 +25,72 @@ const estadosOrdenados = Object.keys(distribuidoresPorEstado).sort();
     </div>
 
     <div class="mx-auto prose prose-lg mt-12 max-w-3xl">
-      {
-        estadosOrdenados.map((estado) => (
-          <div class="mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">
-              {estado.toUpperCase()}
-            </h2>
-
-            {Object.keys(distribuidoresPorEstado[estado])
-              .sort()
-              .map((ciudad) => (
-                <div class="mb-6">
-                  {Object.keys(distribuidoresPorEstado[estado]).length > 1 && (
-                    <h3 class="text-xl font-semibold text-gray-700 mb-3">
-                      {ciudad}
-                    </h3>
-                  )}
-
-                  {distribuidoresPorEstado[estado][ciudad].map(
-                    (distribuidor: Distribuidor) => (
-                      <div class="flex flex-row space-x-4 mb-6 p-4 border-l-4 border-blue-500 bg-gray-50 rounded-r-lg">
-                        <div class="flex-1">
-                          <h4 class="text-lg font-semibold text-gray-800 mb-2">
-                            {distribuidor.nombre}
-                          </h4>
-                          <p class="text-gray-600 mb-1">
-                            {distribuidor.direccion}
-                          </p>
-                          <p class="text-gray-600 mb-2">
-                            {distribuidor.ciudad}, {distribuidor.estado}
-                          </p>
-                          <p class="text-blue-600 font-medium">
-                            {distribuidor.telefonos}
-                          </p>
-                        </div>
-
-                        {distribuidor.esAutorizado && (
-                          <div class="flex flex-col items-center mr-2 mt-2 space-y-2">
-                            <img
-                              src="/images/centroautorizado.jpg"
-                              alt="Centro Autorizado"
-                              class="w-16 h-auto"
-                            />
-
-                            {distribuidor.instagram && (
-                              <a
-                                href={`https://www.instagram.com/${distribuidor.instagram}/`}
-                                target="_blank"
-                                class="text-pink-500 hover:text-pink-600 transition-colors">
-                                <Icon
-                                  class="h-6 w-6"
-                                  name="simple-icons:instagram"
-                                />
-                              </a>
-                            )}
-
-                            {distribuidor.website && (
-                              <a
-                                href={`https://${distribuidor.website}`}
-                                target="_blank"
-                                class="text-blue-500 hover:text-blue-600 transition-colors">
-                                <Icon class="h-6 w-6" name="simple-icons:web" />
-                              </a>
-                            )}
-                          </div>
+      {estadosOrdenados.map(estado => (
+        <div class="mb-8">
+          <h2 class="text-2xl font-bold text-gray-800 mb-4">{estado.toUpperCase()}</h2>
+          
+          {Object.keys(distribuidoresPorEstado[estado])
+            .sort()
+            .map(ciudad => (
+              <div class="mb-6">
+                {Object.keys(distribuidoresPorEstado[estado]).length > 1 && (
+                  <h3 class="text-xl font-semibold text-gray-700 mb-3">{ciudad}</h3>
+                )}
+                
+                {distribuidoresPorEstado[estado][ciudad].map((distribuidor) => (
+                  <div class="flex flex-row space-x-4 mb-6 p-4 border-l-4 border-blue-500 bg-gray-50 rounded-r-lg">
+                    <div class="flex-1">
+                      <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                        {distribuidor.nombre}
+                      </h4>
+                      <p class="text-gray-600 mb-1">
+                        {distribuidor.direccion}
+                      </p>
+                      <p class="text-gray-600 mb-2">
+                        {distribuidor.ciudad}, {distribuidor.estado}
+                      </p>
+                      <p class="text-blue-600 font-medium">
+                        {distribuidor.telefonos}
+                      </p>
+                    </div>
+                    
+                    {distribuidor.esAutorizado && (
+                      <div class="flex flex-col items-center mr-2 mt-2 space-y-2">
+                        <img 
+                          src="/images/centroautorizado.jpg" 
+                          alt="Centro Autorizado" 
+                          class="w-16 h-auto"
+                        />
+                        
+                        {distribuidor.instagram && (
+                          <a 
+                            href={`https://www.instagram.com/${distribuidor.instagram}/`} 
+                            target="_blank"
+                            class="text-pink-500 hover:text-pink-600 transition-colors"
+                          >
+                            <Icon class="h-6 w-6" name="simple-icons:instagram" />
+                          </a>
+                        )}
+                        
+                        {distribuidor.website && (
+                          <a 
+                            href={`https://${distribuidor.website}`} 
+                            target="_blank"
+                            class="text-blue-500 hover:text-blue-600 transition-colors"
+                          >
+                            <Icon class="h-6 w-6" name="simple-icons:web" />
+                          </a>
                         )}
                       </div>
-                    ),
-                  )}
-                </div>
-              ))}
-          </div>
-        ))
-      }
+                    )}
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
+      ))}
     </div>
-
+    
     <div id="contact">
       <Contact />
     </div>
