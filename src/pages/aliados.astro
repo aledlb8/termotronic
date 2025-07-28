@@ -39,16 +39,16 @@ const estadosOrdenados = Object.keys(distribuidoresPorEstado).sort();
                 
                 {distribuidoresPorEstado[estado][ciudad].map((distribuidor) => (
                   <div class="mb-4 p-4 border-l-4 border-blue-500 bg-gray-50 rounded-r-lg">
-                    <h4 class="text-lg font-semibold text-gray-800">
+                    <h4 class="text-lg font-semibold text-gray-800 leading-none m-0">
                       {distribuidor.nombre}
                     </h4>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 leading-none m-0">
                       {distribuidor.direccion}
                     </p>
-                    <p class="text-gray-600">
+                    <p class="text-gray-600 leading-none m-0">
                       {distribuidor.ciudad} Edo {distribuidor.estado}
                     </p>
-                    <p class="text-blue-600 font-medium">
+                    <p class="text-blue-600 font-medium leading-none m-0">
                       {distribuidor.telefonos}
                     </p>
                   </div>
