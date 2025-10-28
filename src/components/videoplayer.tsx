@@ -16,7 +16,7 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer = ({
-    videoSrc = "https://media.termotronic.com/Redes/2025/Videos/20A%C3%B1os%2Emp4",
+    videoSrc = "https://media.termotronic.com/Redes/2025/Videos/20Anios%2Emp4",
     gifSrc = "/videos/video.gif",
     showAsButton = false,
     buttonText = "Ver Video Explicativo",
