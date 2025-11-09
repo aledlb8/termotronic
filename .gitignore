@@ -1,10 +1,13 @@
 # build output
 dist/
 .output/
-.astro
+.astro'
+public/temp/
 
 # dependencies
 node_modules/
+
+
 
 # logs
 npm-debug.log*

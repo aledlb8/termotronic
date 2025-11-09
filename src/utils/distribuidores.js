@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 
 /**
  * @typedef {Object} Distribuidor
@@ -21,8 +21,20 @@ import { readFileSync } from 'fs';
  */
 export function leerDistribuidores() {
   try {
-    // Leer el archivo desde la ruta especificada
-    const filePath = '/home/debian/termotronic/whatsappbot/knowledge/Distribuidores.txt';
+    const rutaDebian = '/home/debian/termotronic/whatsappbot/knowledge/Distribuidores.txt';
+    const rutaWindows = 'D:\\ElCodigo\\whatsappbot\\knowledge\\Distribuidores.txt';
+    
+    // Determinar qué ruta usar
+    let filePath;
+    if (existsSync(rutaDebian)) {
+      filePath = rutaDebian;
+    } else if (existsSync(rutaWindows)) {
+      filePath = rutaWindows;
+    } else {
+      throw new Error('No se encontró el archivo de distribuidores en ninguna ubicación');
+    }
+    
+    // Leer el archivo
     const contenido = readFileSync(filePath, 'utf-8');
     
     return parsearDistribuidores(contenido);

@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 
 /**
  * @typedef {Object} CentroServicio
@@ -18,8 +18,20 @@ import { readFileSync } from 'fs';
  */
 export function leerCentrosServicio() {
   try {
-    // Leer el archivo desde la ruta especificada
-    const filePath = '/home/debian/termotronic/whatsappbot/knowledge/CentrosServicio.txt';
+    const rutaDebian = '/home/debian/termotronic/whatsappbot/knowledge/CentrosServicio.txt';
+    const rutaWindows = 'D:\\ElCodigo\\whatsappbot\\knowledge\\CentrosServicio.txt';
+    
+    // Determinar qué ruta usar
+    let filePath;
+    if (existsSync(rutaDebian)) {
+      filePath = rutaDebian;
+    } else if (existsSync(rutaWindows)) {
+      filePath = rutaWindows;
+    } else {
+      throw new Error('No se encontró el archivo de centros de servicio en ninguna ubicación');
+    }
+    
+    // Leer el archivo
     const contenido = readFileSync(filePath, 'utf-8');
     
     return parsearCentrosServicio(contenido);
