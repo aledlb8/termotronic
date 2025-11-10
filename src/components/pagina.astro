@@ -1,5 +1,7 @@
 ---
 import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Icon } from "astro-icon";
 import { leerCentrosServicio } from "../utils/centrosServicio.js";
 
 // Leer y organizar centros de servicio
@@ -10,67 +12,86 @@ const estadosOrdenados = Object.keys(centrosPorEstado).sort();
 ---
 
 <Container>
-  <div class="mx-auto max-w-3xl mt-14">
-    <h1 class="text-3xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
-      Garantías y Servicios para Termotronic y CBX.
-    </h1>
-    <div class="mx-auto mt-2 max-w-3xl">
-      <br />
-      Sus equipos Termotronic y CBX están amparados por una red de Centros de Servicio
-      autorizados. Ellos cuentan con un amplio stock de repuestos y personal técnico
-      altamente calificado.
+  <Sectionhead>
+    <Fragment slot="title">Garantías y Servicios</Fragment>
+    <Fragment slot="desc">Red de Centros de Servicio Autorizados Termotronic y CBX</Fragment>
+  </Sectionhead>
+
+  <div class="mx-auto max-w-4xl">
+    <div class="bg-gradient-to-r from-brand-50 to-primary-50 border-l-4 border-brand-500 p-6 rounded-r-xl shadow-soft mb-12">
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Sus equipos Termotronic y CBX están amparados por una red de Centros de Servicio
+        autorizados. Ellos cuentan con un amplio stock de repuestos y personal técnico
+        altamente calificado.
+      </p>
     </div>
   </div>
 
-  <div class="mx-auto max-w-3xl">
-    <br />
-    <h1 class="text-3xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+  <div class="mx-auto max-w-5xl mt-16">
+    <h2 class="text-3xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-8">
       Centros de Servicio Autorizados
-    </h1>
-    <br />
+    </h2>
 
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div>
       {estadosOrdenados.map(estado => (
-        <div class="mb-8">
-          <h2 class="text-2xl font-bold text-gray-800 mb-4">{estado.toUpperCase()}</h2>
-          
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-green-700 to-green-600 bg-clip-text text-transparent mb-6 border-b-2 border-green-200 pb-2">
+            {estado.toUpperCase()}
+          </h3>
+
           {Object.keys(centrosPorEstado[estado])
             .sort()
             .map(ciudad => (
-              <div class="mb-6">
+              <div class="mb-8">
                 {Object.keys(centrosPorEstado[estado]).length > 1 && (
-                  <h3 class="text-xl font-semibold text-gray-700 mb-3">{ciudad}</h3>
+                  <h4 class="text-xl font-semibold text-gray-700 mb-4 ml-2">{ciudad}</h4>
                 )}
-                
-                {centrosPorEstado[estado][ciudad]
-                  .sort((a, b) => a.nombre.localeCompare(b.nombre))
-                  .map((centro) => (
-                    <div class="mb-4 p-4 border-l-4 border-green-500 bg-green-50 rounded-r-lg">
-                      <h4 class="text-lg font-semibold text-gray-800 leading-none m-0">
-                        {centro.nombre}
-                      </h4>
-                      <p class="text-gray-600 leading-none m-0">
-                        {centro.direccion}
-                      </p>
-                      <p class="text-gray-600 leading-none m-0">
-                        {centro.ciudad} Edo {centro.estado}
-                      </p>
-                      <p class="text-green-600 font-medium leading-none m-0">
-                        {centro.telefonos}
-                      </p>
-                    </div>
-                  ))}
+
+                <div class="grid gap-4">
+                  {centrosPorEstado[estado][ciudad]
+                    .sort((a, b) => a.nombre.localeCompare(b.nombre))
+                    .map((centro) => (
+                      <div class="group p-6 border-l-4 border-green-500 bg-white rounded-r-xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-x-1">
+                        <div class="flex items-start gap-4">
+                          <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                            <Icon class="w-6 h-6 text-white" name="mdi:tools" />
+                          </div>
+                          <div class="flex-1 space-y-1">
+                            <h5 class="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors">
+                              {centro.nombre}
+                            </h5>
+                            <p class="text-gray-600 flex items-center gap-2">
+                              <Icon class="w-4 h-4 text-gray-400" name="mdi:map-marker" />
+                              {centro.direccion}
+                            </p>
+                            <p class="text-gray-500 text-sm">
+                              {centro.ciudad}, Edo. {centro.estado}
+                            </p>
+                            <p class="text-green-600 font-semibold flex items-center gap-2">
+                              <Icon class="w-4 h-4" name="mdi:phone" />
+                              {centro.telefonos}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                </div>
               </div>
             ))}
         </div>
       ))}
     </div>
 
-    <br />
-    <br />
-    <h2 class="text-xl lg:text-2xl lg:tracking-tight">
-      Nota: Si su equipo está en garantía, recuerde tener a mano su Talón de
-      Garantía y su factura de compra para optar por ella.
-    </h2>
+    <div class="mt-12 bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-500 p-6 rounded-r-xl shadow-soft">
+      <div class="flex items-start gap-4">
+        <Icon class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" name="mdi:information" />
+        <div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Nota Importante</h3>
+          <p class="text-gray-700">
+            Si su equipo está en garantía, recuerde tener a mano su <span class="font-semibold">Talón de Garantía</span> y su <span class="font-semibold">factura de compra</span> para optar por ella.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </Container>

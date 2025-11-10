@@ -5,33 +5,74 @@ import { Icon } from "astro-icon";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 max-w-screen-2xl mx-auto">
-  <div>
+  class="grid lg:grid-cols-2 gap-12 place-items-center pt-20 pb-12 md:pt-16 md:pb-28 max-w-screen-2xl mx-auto px-4 relative">
+  <!-- Decorative gradient blob -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl -z-10 animate-float"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl -z-10 animate-float" style="animation-delay: 1.5s;"></div>
+
+  <div class="space-y-8 animate-fade-in">
+    <div class="inline-block">
+      <span class="px-4 py-2 rounded-full bg-gradient-to-r from-brand-100 to-brand-200 text-brand-800 text-sm font-semibold shadow-soft">
+        30 años de experiencia
+      </span>
+    </div>
+
     <h1
-      class="text-3xl lg:text-3xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Calentador Eléctrico de Agua sin Tanque.
+      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter bg-gradient-to-r from-gray-900 via-brand-800 to-gray-900 bg-clip-text text-transparent leading-tight">
+      Calentador Eléctrico de Agua sin Tanque
     </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+
+    <p class="text-lg lg:text-xl mt-6 text-slate-600 max-w-xl leading-relaxed">
       Los calentadores de agua TERMOTRONIC combinan la más alta tecnología con
       un novedoso diseño para brindarle a sus usuarios años de disfrute de un
-      sistema eficiente, ecológico y confiable de calentar agua.
+      sistema <span class="font-semibold text-brand-600">eficiente</span>,
+      <span class="font-semibold text-green-600">ecológico</span> y
+      <span class="font-semibold text-primary-600">confiable</span> de calentar agua.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
       <Link
         href="/informacion"
-        class="flex gap-1 items-center justify-center"
+        class="flex gap-2 items-center justify-center bg-gradient-to-r from-brand-600 to-brand-700 hover:from-brand-700 hover:to-brand-800 text-white font-semibold px-6 py-3 rounded-lg shadow-medium hover:shadow-large transition-all duration-300 hover:scale-105 group"
         rel="noopener">
-        <Icon class="text-white w-5 h-5" name="mdi:information" />
-
-        Mas Información
+        <Icon class="text-white w-5 h-5 group-hover:rotate-12 transition-transform duration-300" name="mdi:information" />
+        Más Información
       </Link>
+      <a
+        href="/productos/termotronic"
+        class="flex gap-2 items-center justify-center border-2 border-brand-600 text-brand-600 hover:bg-brand-50 font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105 group">
+        <Icon class="text-brand-600 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" name="mdi:arrow-right" />
+        Ver Productos
+      </a>
+    </div>
+
+    <!-- Trust indicators -->
+    <div class="flex flex-wrap gap-6 mt-8 pt-8 border-t border-gray-200">
+      <div class="flex items-center gap-2">
+        <Icon class="text-green-600 w-6 h-6" name="mdi:check-circle" />
+        <span class="text-sm text-gray-600 font-medium">Ecológico</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="text-blue-600 w-6 h-6" name="mdi:check-circle" />
+        <span class="text-sm text-gray-600 font-medium">Ahorra Energía</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <Icon class="text-red-600 w-6 h-6" name="mdi:check-circle" />
+        <span class="text-sm text-gray-600 font-medium">Garantía</span>
+      </div>
     </div>
   </div>
-  <div class="py-6 mt-8 md:order-1 md:block">
-    <VideoPlayer 
-      videoSrc="https://media.termotronic.com/Redes/2025/Videos/20Anios%2Emp4"
-      gifSrc="/videos/video.gif"
-      client:load 
-    />
+
+  <div class="py-6 mt-8 lg:mt-0 md:order-1 md:block animate-slide-up w-full">
+    <div class="relative group">
+      <div class="absolute -inset-1 bg-gradient-to-r from-brand-600 to-primary-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+      <div class="relative">
+        <VideoPlayer
+          videoSrc="https://media.termotronic.com/Redes/2025/Videos/20Anios%2Emp4"
+          gifSrc="/videos/video.gif"
+          client:load
+        />
+      </div>
+    </div>
   </div>
 </main>

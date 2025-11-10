@@ -1,26 +1,63 @@
 ---
 import Icon from "astro-icon";
-import Link from "./ui/link.astro";
 ---
 
-<div
-  class="max-w-screen-2xl mx-auto bg-gray-100 p-8 md:py-20 mt-20 rounded-3xl flex flex-col items-center text-center">
-  <h2
-    class="text-3xl lg:text-3xl font-bold lg:tracking-tight xl:tracking-tighter">
-    Conviértase en nuestro aliado.
-  </h2>
-  <p class="text-black mt-4 text-lg md:text-xl">
-    Solicitamos Distribuidores detallistas, centros de servicio, instaladores,
-    centros autorizados de atención post venta.
-  </p>
-  <div class="flex mt-5">
-    <Link
-      href="/aliados#contact"
-      target="_blank"
-      class="flex gap-1 items-center justify-center"
-      rel="noopener">
-      <Icon class="text-white w-5 h-5" name="mdi:contact" />
-      Contáctenos
-    </Link>
+<div class="max-w-screen-2xl mx-auto mt-24 px-4">
+  <div
+    class="relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 p-12 md:p-20 rounded-3xl shadow-large">
+    <!-- Decorative elements -->
+    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-900/30 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 flex flex-col items-center text-center space-y-6">
+      <div class="inline-block">
+        <span class="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-semibold">
+          Únete a nuestra red
+        </span>
+      </div>
+
+      <h2
+        class="text-3xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter text-white max-w-3xl">
+        Conviértase en nuestro aliado
+      </h2>
+
+      <p class="text-white/90 mt-4 text-lg md:text-xl max-w-2xl leading-relaxed">
+        Solicitamos Distribuidores detallistas, centros de servicio, instaladores,
+        y centros autorizados de atención post venta.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mt-8">
+        <a
+          href="/aliados#contact"
+          target="_blank"
+          class="flex gap-2 items-center justify-center bg-white text-brand-700 hover:bg-gray-100 font-semibold px-8 py-4 rounded-lg shadow-medium hover:shadow-large transition-all duration-300 hover:scale-105 group"
+          rel="noopener">
+          <Icon class="text-brand-700 w-5 h-5 group-hover:rotate-12 transition-transform duration-300" name="mdi:contact" />
+          Contáctenos
+        </a>
+        <a
+          href="/aliados"
+          class="flex gap-2 items-center justify-center border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 group">
+          <Icon class="text-white w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" name="mdi:information" />
+          Más Información
+        </a>
+      </div>
+
+      <!-- Stats or benefits -->
+      <div class="grid sm:grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/20 w-full max-w-3xl">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-2">30+</div>
+          <div class="text-white/80 text-sm">Años de experiencia</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-2">100%</div>
+          <div class="text-white/80 text-sm">Productos nacionales</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-white mb-2">1A</div>
+          <div class="text-white/80 text-sm">Garantía</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

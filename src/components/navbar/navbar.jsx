@@ -21,7 +21,17 @@ export default function App() {
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
 
   return (
-    <Navbar isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      maxWidth="full"
+      className="border-b border-gray-300 sticky top-0 z-50 shadow-soft"
+      classNames={{
+        base: "bg-gray-100/95 backdrop-blur-lg",
+        wrapper: "px-4 sm:px-6 lg:px-8",
+        brand: "gap-3",
+        item: "data-[active=true]:text-brand-600",
+      }}>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -54,10 +64,11 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link
-            className="hover:text-red-400 font-bold"
+            className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
             color="foreground"
             href="/">
             Inicio
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
         </NavbarItem>
         <Dropdown isOpen={isDropdownOpen}>
@@ -66,10 +77,11 @@ export default function App() {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}>
               <Link
-                className="hover:text-red-400 font-bold"
+                className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
                 color="foreground"
                 href="#">
                 Productos
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </DropdownTrigger>
           </NavbarItem>
@@ -102,26 +114,29 @@ export default function App() {
         </Dropdown>
         <NavbarItem>
           <Link
-            className="hover:text-red-400 font-bold"
+            className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
             color="foreground"
             href="/informacion">
             Información
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="hover:text-red-400 font-bold"
+            className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
             color="foreground"
             href="/faq">
             FAQ
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            className="hover:text-red-400 font-bold"
+            className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
             color="foreground"
             href="/aliados">
             Aliados
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
           </Link>
         </NavbarItem>
         <Dropdown isOpen={isDropdownOpen2}>
@@ -130,10 +145,11 @@ export default function App() {
               onMouseEnter={() => setIsDropdownOpen2(true)}
               onMouseLeave={() => setIsDropdownOpen2(false)}>
               <Link
-                className="hover:text-red-400 font-bold"
+                className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
                 color="foreground"
                 href="#">
                 Soporte
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </DropdownTrigger>
           </NavbarItem>
@@ -166,8 +182,7 @@ export default function App() {
         </Dropdown>
         <NavbarItem>
           <Link
-            className="hover:text-red-400 font-bold"
-            color="foreground"
+            className="bg-gradient-to-r from-brand-600 to-brand-700 text-white font-semibold px-4 py-2 rounded-lg hover:shadow-medium transition-all duration-300 hover:scale-105"
             href="https://shop.termotronic.com" target="_blank" rel="noopener noreferrer">
             Tienda
           </Link>
@@ -175,16 +190,16 @@ export default function App() {
 
       </NavbarContent>
 
-      <NavbarMenu>
+      <NavbarMenu className="bg-gray-100/95 backdrop-blur-lg pt-6">
         <NavbarMenuItem>
-          <Link className="hover:text-red-400" color="foreground" href="/">
+          <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="/">
             Inicio
           </Link>
         </NavbarMenuItem>
         <Dropdown>
           <NavbarMenuItem>
             <DropdownTrigger>
-              <Link className="hover:text-red-400" color="foreground" href="#">
+              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#">
                 Productos
               </Link>
             </DropdownTrigger>
@@ -216,20 +231,20 @@ export default function App() {
         </Dropdown>
         <NavbarMenuItem>
           <Link
-            className="hover:text-red-400"
+            className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2"
             color="foreground"
             href="/informacion">
             Información
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
-          <Link className="hover:text-red-400" color="foreground" href="/faq">
+          <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="/faq">
             FAQ
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem>
           <Link
-            className="hover:text-red-400"
+            className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2"
             color="foreground"
             href="/aliados">
             Aliados
@@ -238,7 +253,7 @@ export default function App() {
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
-              <Link className="hover:text-red-400" color="foreground" href="#">
+              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#">
                 Soporte
               </Link>
             </DropdownTrigger>
@@ -270,8 +285,7 @@ export default function App() {
         </Dropdown>
         <NavbarMenuItem>
           <Link
-            className="hover:text-red-400"
-            color="foreground"
+            className="bg-gradient-to-r from-brand-600 to-brand-700 text-white font-semibold px-4 py-2 rounded-lg hover:shadow-medium transition-all duration-300 inline-block mt-4"
             href="https://shop.termotronic.com">
             Tienda
           </Link>

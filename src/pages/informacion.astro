@@ -2,22 +2,28 @@
 import Container from "@components/container.astro";
 import Layout from "@layouts/Layout.astro";
 import VideoPlayer from "@components/videoplayer";
+import Sectionhead from "@components/sectionhead.astro";
 ---
 
 <Layout
   title="Información Termotronic y CBX, cómo funcionan."
   description="Descubra que es un calentador Termotronic y como funciona Termotronic y CBX - Calentador Eléctrico de Agua sin Tanque. Agua Caliente sin límite. Ahorro de espacio. Ahorro de Energía. Agua caliente instantánea">
   <Container>
+    <Sectionhead>
+      <Fragment slot="title">Información sobre Termotronic</Fragment>
+      <Fragment slot="desc">Descubra cómo funciona y las ventajas de nuestros calentadores sin tanque</Fragment>
+    </Sectionhead>
+
     <style>
       #espacio,
       #instantaneo,
       #ilimitado,
       #electricidad,
       #calidad {
-        scroll-margin-top: 100px; /* Ajustar según altura del header */
+        scroll-margin-top: 100px;
       }
     </style>
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div class="mx-auto prose prose-lg mt-12 max-w-4xl prose-headings:bg-gradient-to-r prose-headings:from-gray-900 prose-headings:to-gray-700 prose-headings:bg-clip-text prose-headings:text-transparent">
       <h2>¿Qué es Termotronic?</h2>
       Termotronic es un calentador de agua sin tanque y activado por flujo. Este
       sistema le brinda básicamente cinco ventajas sobre un calentador tradicional:
@@ -41,7 +47,7 @@ import VideoPlayer from "@components/videoplayer";
         <img
           src="/images/CBXEspacio.jpg"
           alt="Ahorro de Especio"
-          class="rounded-xl border p-2 border-black shadow-2xl"
+          class="rounded-2xl border-2 border-gray-200 p-2 shadow-large hover:shadow-xl transition-shadow duration-300"
         />
       </section>
       <section id="instantaneo">
@@ -58,7 +64,7 @@ import VideoPlayer from "@components/videoplayer";
         <img
           src="/images/TermotronicLimites.jpg"
           alt="Calentador sin tanque"
-          class="rounded-xl border p-2 border-black shadow-2xl"
+          class="rounded-2xl border-2 border-gray-200 p-2 shadow-large hover:shadow-xl transition-shadow duration-300"
         />
       </section>
       <section id="ilimitado">
@@ -70,7 +76,7 @@ import VideoPlayer from "@components/videoplayer";
         <img
           src="/images/TermotronicLimites2.jpg"
           alt="Ahorro de energía"
-          class="rounded-xl border p-2 border-black shadow-2xl"
+          class="rounded-2xl border-2 border-gray-200 p-2 shadow-large hover:shadow-xl transition-shadow duration-300"
         />
       </section>
       <section id="electricidad">
@@ -83,7 +89,7 @@ import VideoPlayer from "@components/videoplayer";
         <img
           src="/images/TermotronicAhorre.jpg"
           alt="Ahorro de energía"
-          class="rounded-xl border p-2 border-black shadow-2xl"
+          class="rounded-2xl border-2 border-gray-200 p-2 shadow-large hover:shadow-xl transition-shadow duration-300"
         />
       </section>
       <section id="calidad">
@@ -100,7 +106,7 @@ import VideoPlayer from "@components/videoplayer";
       <img
         src="/images/CBXEconomicoBanera.jpg"
         alt="Termotronic"
-        class="rounded-xl border p-2 border-black shadow-2xl"
+        class="rounded-2xl border-2 border-gray-200 p-2 shadow-large hover:shadow-xl transition-shadow duration-300"
       />
       <b>Termotronic</b> tiene sensor de flujo y tarjeta electrónica. Usted puede
       controlar la temperatura de salida con precisión. Sus paredes son de cobre.<br
@@ -114,7 +120,7 @@ import VideoPlayer from "@components/videoplayer";
       <b>CBX</b> es multi voltaje, trabaja desde 110 a 220 Voltios. <br /><br />
       Ambos tienen la misma potencia y la misma garantía.
       <br />
-      <div class="border-t border-gray-400 mt-12"></div>
+      <div class="border-t border-gray-200 mt-16 mb-12"></div>
       <h2>¿Cómo funciona un calentador tradicional de tanque?</h2>
       <br />
       El calentador tradicional tiene un depósito donde acumula el agua y la calienta

@@ -201,15 +201,11 @@ export default function FAQ() {
           casas muy grandes es recomendable instalar dos o más unidades,
           instaladas siempre lo más cerca posible del lugar de uso.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("2") && (
         <AccordionItem key="2" title="¿Cuanta presión de agua necesita?">
           Termotronic funciona entre 3 y 150 PSI (0,2 y 10 bar). Pero es
           recomendable que se instale en viviendas con más de 5 PSI (0,4 Bar).
           Funciona perfectamente aunque su suministro de agua sea por gravedad.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("6") && (
         <AccordionItem
           key="6"
           title="¿A pesar de ser eléctrico es realmente seguro?">
@@ -217,8 +213,6 @@ export default function FAQ() {
           el más novedoso diseño para brindarles a sus usuarios años de agua
           caliente de manera segura y confiable.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("7") && (
         <AccordionItem
           key="7"
           title="¿Este calentador puede trabajar con 110 voltios?">
@@ -226,16 +220,12 @@ export default function FAQ() {
           por dentro de él y para obtener la potencia necesaria para este
           trabajo debe estar conectado a una línea de 220 voltios.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("8") && (
         <AccordionItem
           key="8"
           title="¿Puede abastecer a dos o tres baños a la vez?">
           No, para abastecer a dos o más baños simultáneamente se requiere de
           una instalación en paralelo de varios Termotronic
         </AccordionItem>
-        )}
-        {filteredKeys.includes("9") && (
         <AccordionItem
           key="9"
           title="¿A que temperatura calienta el agua? ¿Que factores pueden afectar la temperatura del agua?">
@@ -278,24 +268,18 @@ export default function FAQ() {
           Caudal en uso: Cuanto mayor sea en caudal de agua menor será el
           aumento de temperatura.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("10") && (
         <AccordionItem
           key="10"
           title="¿Cuantos litros por minuto despacha este calentador?">
           Nuevamente nos referimos al gráfico anterior donde se puede observar
           el rendimiento del calentador con relación al caudal entregado.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("11") && (
         <AccordionItem key="11" title="¿Cuál es la falla más común?">
           La falla más común que presenta este calentador es debida a errores al
           momento de la instalación. Una instalación que siga cuidadosamente las
           instrucciones asegura años de disfrute del TERMOTRONIC. Por favor no
           dude en comunicarse con nuestro departamento de instalaciones.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("12") && (
         <AccordionItem
           key="12"
           title="¿Puedo utilizarlo para llenar una piscina?">
@@ -304,24 +288,16 @@ export default function FAQ() {
           Nuestro calentador no fue diseñado para este fin por lo tanto no lo
           recomendamos.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("13") && (
         <AccordionItem key="13" title="¿Necesita ventilación?">
           No, el TERMOTRONIC no necesita ningún tipo de ventilación. Puede
           colocarse en un gabinete metálico totalmente cerrado.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("14") && (
         <AccordionItem key="14" title="¿Puede ir empotrado?">
           Si
         </AccordionItem>
-        )}
-        {filteredKeys.includes("15") && (
         <AccordionItem key="15" title="¿Tienen servicio a domicilio?">
           Sí. Llame a nuestro distribuidor más cercano.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("16") && (
         <AccordionItem
           key="16"
           title="¿En realidad es agua caliente o solo tibia?">
@@ -331,8 +307,6 @@ export default function FAQ() {
           caudal del agua que expide un grifo y por ultimo el voltaje que
           alimenta al calentador.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("17") && (
         <AccordionItem key="17" title="¿Tienen varias capacidades?">
           El CBX está equipado con un selector de potencia. Con un simple ajuste
           se puede seleccionar entre 12Kw, 8.2Kw o 5.5Kw según la siguiente
@@ -351,19 +325,13 @@ export default function FAQ() {
           <br />
           *Subir un calibre si el largo del cable es superior a 20 mts.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("18") && (
         <AccordionItem key="18" title="¿Puedo usarlo con tuberías de PVC?">
           Hemos realizado pruebas con la tubería de PVC para agua caliente marca
           PAVCO con resultados satisfactorios.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("19") && (
         <AccordionItem key="19" title="¿Cualquier persona puede instalarlo?">
           Solo debe ser instalado por un electricista profesional certificado.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("20") && (
         <AccordionItem
           key="20"
           title="¿A la hora de una falla, venden ustedes los repuestos?">
@@ -372,15 +340,11 @@ export default function FAQ() {
           causante de falla en la instalación para evitar futuros problemas y
           entrenamiento o asesoramiento a terceros.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("21") && (
         <AccordionItem key="21" title="Cuanto tiempo tienen en el mercado?">
           Nuestra planta abrió sus puertas a la fabricación de equipos
           electrónicos en 1987. Termotronic sale por primera vez al mercado en
           1994.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("22") && (
         <AccordionItem key="22" title="¿Que experiencia han tenido?">
           Todos los que trabajamos en TERMOTRONIC estamos muy estimulados por
           los comentarios de agradecimiento y felicitaciones de nuestros
@@ -390,8 +354,6 @@ export default function FAQ() {
           calentadores de agua… somos parte de la vida de quienes confían en
           nosotros cada día.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("23") && (
         <AccordionItem
           key="23"
           title="¿No es una limitación que trabaje solo con 220 voltios? ¿Por que no puedo conectarlo a 110 voltios?">
@@ -402,8 +364,6 @@ export default function FAQ() {
           y puede operan bien dentro del rango de 90 a 240 voltios. Importante: recuerde que a menor
           voltaje será menor la potencia y en consecuencia menos caliente el agua.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("24") && (
         <AccordionItem
           key="24"
           title="¿Puedo conectar dos Termotronic en serie?">
@@ -411,8 +371,6 @@ export default function FAQ() {
           volúmenes de agua, una instalación en paralelo de dos o más
           Termotronic es la solución.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("25") && (
         <AccordionItem key="25" title="¿Que me cubre la garantía?">
           El TERMOTRONIC está garantizado contra cualquier defecto de fábrica,
           en sus partes mecánicas por un período de 5 años y en sus partes
@@ -427,8 +385,6 @@ export default function FAQ() {
           contacte a cualquier distribuidor autorizado. Él le dará toda la
           información requerida para prestarle servicio a su unidad.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("26") && (
         <AccordionItem
           key="26"
           title="¿Por que sugieren en algunos casos, la instalación de un filtro de paso rápido?">
@@ -438,8 +394,6 @@ export default function FAQ() {
           larga puede ser una molestia. Si esto ocurre con frecuencia es
           aconsejable instalar un filtro de paso rápido.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("27") && (
         <AccordionItem
           key="27"
           title="¿La variación en el voltaje o picos de voltaje pueden afectar la unidad?">
@@ -447,15 +401,11 @@ export default function FAQ() {
           mejor sí el voltaje es más alto y viceversa). Los picos de voltaje no
           afectan el funcionamiento del TERMOTRONIC.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("28") && (
         <AccordionItem
           key="28"
           title="¿Los cortes en el suministro de agua ocasionan algún daño?">
           No. Nuestro calentador solo funciona si está circulando agua.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("29") && (
         <AccordionItem
           key="29"
           title="¿Es prudente bajar el breaker que alimenta el calentador si voy de viaje?">
@@ -464,16 +414,12 @@ export default function FAQ() {
           electricidad la nevera, sistemas de alarma u otros equipos que
           requieran electricidad permanentemente.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("30") && (
         <AccordionItem
           key="30"
           title="¿Puedo conectar la unidad en un circuito cerrado?">
           No lo recomendamos, Termotronic no fue diseñado para ese uso.
           Para circuitos cerrados utilice el CBX.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("31") && (
         <AccordionItem
           key="31"
           title="¿Por que se disparan los breaker en algunas oportunidades?">
@@ -496,8 +442,6 @@ export default function FAQ() {
           6 Otro equipo está conectado a la misma línea que alimenta el
           calentador.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("32") && (
         <AccordionItem
           key="32"
           title="¿Cuánto tarda en llegar el agua caliente?">
@@ -506,16 +450,12 @@ export default function FAQ() {
           habitación no más de 5 segundos. Si el calentador esta a unos 15
           metros debe tardar aproximadamente unos 30 a 45 segundos.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("33") && (
         <AccordionItem key="33" title="¿A que se refieren con instantáneo?">
           Los calentadores eléctricos tradicionales, una vez enchufados, pueden
           tardar más de 30 minutos en calentar el agua de su tanque. El
           TERMOTRONIC calienta el agua según va circulado por dentro de él, por
           lo tanto no es necesario esperar para poder usar el agua caliente.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("34") && (
         <AccordionItem
           key="34"
           title="¿Si la distancia que hay entre el calentador y la ducha es muy grande el agua sale mas fría?">
@@ -560,8 +500,6 @@ export default function FAQ() {
           temperatura del agua en 20º C, si el agua está entrado a 20º C esta
           saldrá a 40º C.
         </AccordionItem>
-        )}
-        {filteredKeys.includes("35") && (
         <AccordionItem
           key="35"
           title="Mi calentador funciona muy bien por uno o dos minutos, entonces se apaga. ¿Qué puede ser?">
@@ -604,7 +542,6 @@ export default function FAQ() {
           baja y la falla continúa entonces será necesario colocar el selector
           en mínimo.
         </AccordionItem>
-        )}
       </Accordion>
     </div>
   );

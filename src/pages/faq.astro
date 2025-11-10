@@ -1,5 +1,6 @@
 ---
 import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
 import FAQ from "@components/faq";
 import Layout from "@layouts/Layout.astro";
 ---
@@ -8,6 +9,10 @@ import Layout from "@layouts/Layout.astro";
   title="FAQ Termotronic y CBX - Calentadores de agua sin tanque."
   description="Respuestas a preguntas frecuentes de calentadores Termotronic y CBX, Calentadores Eléctricos de Agua sin Tanque. Agua Caliente sin límite. Ahorro de espacio. Ahorro de Energía. Agua caliente instantánea">
   <Container>
+    <Sectionhead>
+      <Fragment slot="title">Preguntas Frecuentes</Fragment>
+      <Fragment slot="desc">Encuentra respuestas a las preguntas más comunes sobre Termotronic y CBX</Fragment>
+    </Sectionhead>
     <FAQ client:load />
   </Container>
 </Layout>
