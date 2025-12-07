@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,7 @@ export default defineConfig({
     domains: ["www.termotronic.com", "termotronic.com"]
   },
   site: "https://www.termotronic.com",
-  integrations: [tailwind(), mdx(), sitemap(), react()],
+  integrations: [tailwind(), mdx(), sitemap(), react(), icon()],
   vite: {
     assetsInclude: ['**/*.{png,jpg,gif,mp4}'],
     resolve: {
