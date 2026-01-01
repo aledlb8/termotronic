@@ -54,25 +54,49 @@ function generarWhatsAppUrl(telefono) {
     </Sectionhead>
 
     <div class="mx-auto mt-12 max-w-5xl">
-      {estadosOrdenados.map(estado => (
-        <div class="mb-12">
-          <h2 class="text-3xl font-bold bg-gradient-to-r from-brand-700 to-brand-600 bg-clip-text text-transparent mb-6 border-b-2 border-brand-200 pb-2">
-            {estado.toUpperCase()}
-          </h2>
+      <!-- Campo de búsqueda -->
+      <div class="mb-8 sticky top-4 z-10 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4">
+        <div class="relative">
+          <Icon class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" name="mdi:magnify" />
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar por estado, ciudad, dirección o nombre de tienda..."
+            class="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-lg focus:border-brand-500 focus:ring-2 focus:ring-brand-200 outline-none transition-all"
+          />
+        </div>
+        <div id="searchResults" class="mt-2 text-sm text-gray-600 hidden"></div>
+        <div id="noResults" class="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg text-yellow-800 hidden">
+          No se encontraron distribuidores que coincidan con tu búsqueda.
+        </div>
+      </div>
 
-          {Object.keys(distribuidoresPorEstado[estado])
-            .sort()
-            .map(ciudad => (
-              <div class="mb-8">
-                {Object.keys(distribuidoresPorEstado[estado]).length > 1 && (
-                  <h3 class="text-xl font-semibold text-gray-700 mb-4 ml-2">{ciudad}</h3>
-                )}
+      <div id="distribuidoresList">
+        {estadosOrdenados.map(estado => (
+          <div class="estado-group mb-12" data-estado={estado.toLowerCase()}>
+            <h2 class="text-3xl font-bold bg-gradient-to-r from-brand-700 to-brand-600 bg-clip-text text-transparent mb-6 border-b-2 border-brand-200 pb-2">
+              {estado.toUpperCase()}
+            </h2>
 
-                <div class="grid gap-4">
-                  {distribuidoresPorEstado[estado][ciudad]
-                    .sort((a, b) => a.nombre.localeCompare(b.nombre))
-                    .map((distribuidor) => (
-                    <div class="group p-6 border-l-4 border-brand-500 bg-white rounded-r-xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-x-1">
+            {Object.keys(distribuidoresPorEstado[estado])
+              .sort()
+              .map(ciudad => (
+                <div class="ciudad-group mb-8" data-ciudad={ciudad.toLowerCase()}>
+                  {Object.keys(distribuidoresPorEstado[estado]).length > 1 && (
+                    <h3 class="text-xl font-semibold text-gray-700 mb-4 ml-2">{ciudad}</h3>
+                  )}
+
+                  <div class="grid gap-4">
+                    {distribuidoresPorEstado[estado][ciudad]
+                      .sort((a, b) => a.nombre.localeCompare(b.nombre))
+                      .map((distribuidor) => (
+                      <div
+                        class="distribuidor-item group p-6 border-l-4 border-brand-500 bg-white rounded-r-xl shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-x-1"
+                        data-nombre={distribuidor.nombre.toLowerCase()}
+                        data-direccion={distribuidor.direccion.toLowerCase()}
+                        data-ciudad={distribuidor.ciudad.toLowerCase()}
+                        data-estado={distribuidor.estado.toLowerCase()}
+                      >
                       <div class="flex items-start gap-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-500 to-brand-600 rounded-lg flex items-center justify-center">
                           <Icon class="w-6 h-6 text-white" name="mdi:store" />
@@ -113,12 +137,104 @@ function generarWhatsAppUrl(telefono) {
                 </div>
               </div>
             ))}
-        </div>
-      ))}
+          </div>
+        ))}
+      </div>
     </div>
-    
+
     <div id="contact">
       <Contact />
     </div>
   </Container>
 </Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    const noResults = document.getElementById('noResults');
+    const distribuidoresList = document.getElementById('distribuidoresList');
+    const estadoGroups = document.querySelectorAll('.estado-group');
+    const ciudadGroups = document.querySelectorAll('.ciudad-group');
+    const distribuidorItems = document.querySelectorAll('.distribuidor-item');
+
+    function normalizeText(text) {
+      return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+    }
+
+    function filterDistribuidores() {
+      const searchTerm = normalizeText(searchInput.value.trim());
+
+      if (searchTerm === '') {
+        // Mostrar todo
+        estadoGroups.forEach(group => group.style.display = '');
+        ciudadGroups.forEach(group => group.style.display = '');
+        distribuidorItems.forEach(item => item.style.display = '');
+        searchResults.classList.add('hidden');
+        noResults.classList.add('hidden');
+        return;
+      }
+
+      let visibleCount = 0;
+
+      // Ocultar todo primero
+      estadoGroups.forEach(group => group.style.display = 'none');
+      ciudadGroups.forEach(group => group.style.display = 'none');
+      distribuidorItems.forEach(item => item.style.display = 'none');
+
+      // Filtrar distribuidores
+      distribuidorItems.forEach(item => {
+        const nombre = normalizeText(item.dataset.nombre || '');
+        const direccion = normalizeText(item.dataset.direccion || '');
+        const ciudad = normalizeText(item.dataset.ciudad || '');
+        const estado = normalizeText(item.dataset.estado || '');
+
+        const matches =
+          nombre.includes(searchTerm) ||
+          direccion.includes(searchTerm) ||
+          ciudad.includes(searchTerm) ||
+          estado.includes(searchTerm);
+
+        if (matches) {
+          item.style.display = '';
+          visibleCount++;
+
+          // Mostrar ciudad padre
+          const ciudadGroup = item.closest('.ciudad-group');
+          if (ciudadGroup) {
+            ciudadGroup.style.display = '';
+
+            // Mostrar estado padre
+            const estadoGroup = ciudadGroup.closest('.estado-group');
+            if (estadoGroup) {
+              estadoGroup.style.display = '';
+            }
+          }
+        }
+      });
+
+      // Mostrar resultados
+      if (visibleCount > 0) {
+        searchResults.textContent = `${visibleCount} distribuidor${visibleCount !== 1 ? 'es' : ''} encontrado${visibleCount !== 1 ? 's' : ''}`;
+        searchResults.classList.remove('hidden');
+        noResults.classList.add('hidden');
+      } else {
+        searchResults.classList.add('hidden');
+        noResults.classList.remove('hidden');
+      }
+    }
+
+    searchInput.addEventListener('input', filterDistribuidores);
+
+    // Permitir limpiar la búsqueda con ESC
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        filterDistribuidores();
+      }
+    });
+  });
+</script>
