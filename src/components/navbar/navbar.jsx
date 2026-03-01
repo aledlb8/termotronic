@@ -106,7 +106,8 @@ export default function App() {
               <Link
                 className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
                 color="foreground"
-                href="#">
+                href="#"
+                onClick={(e) => e.preventDefault()}>
                 Productos
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
@@ -177,7 +178,8 @@ export default function App() {
               <Link
                 className="hover:text-brand-600 font-semibold transition-all duration-300 hover:scale-105 relative group"
                 color="foreground"
-                href="#">
+                href="#"
+                onClick={(e) => e.preventDefault()}>
                 Soporte
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
@@ -232,7 +234,7 @@ export default function App() {
         <Dropdown classNames={{ content: "p-0 bg-transparent shadow-none border-0" }}>
           <NavbarMenuItem>
             <DropdownTrigger>
-              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#">
+              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#" onClick={(e) => e.preventDefault()}>
                 Productos
               </Link>
             </DropdownTrigger>
@@ -289,7 +291,7 @@ export default function App() {
         <Dropdown classNames={{ content: "p-0 bg-transparent shadow-none border-0" }}>
           <NavbarItem>
             <DropdownTrigger>
-              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#">
+              <Link className="hover:text-brand-600 font-semibold transition-colors duration-300 text-lg py-2" color="foreground" href="#" onClick={(e) => e.preventDefault()}>
                 Soporte
               </Link>
             </DropdownTrigger>
