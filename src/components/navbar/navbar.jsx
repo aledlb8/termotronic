@@ -243,7 +243,7 @@ export default function App() {
             {/* Productos acordeón */}
             <div>
               <button
-                onClick={() => setMobileProductosOpen(!mobileProductosOpen)}
+                onClick={() => { setMobileProductosOpen(!mobileProductosOpen); setMobileSoporteOpen(false); }}
                 className="w-full flex items-center justify-between text-gray-800 font-semibold text-base py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-brand-600 transition-colors">
                 <span>Productos</span>
                 <svg className={`w-4 h-4 transition-transform duration-200 ${mobileProductosOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -283,7 +283,7 @@ export default function App() {
             {/* Soporte acordeón */}
             <div>
               <button
-                onClick={() => setMobileSoporteOpen(!mobileSoporteOpen)}
+                onClick={() => { setMobileSoporteOpen(!mobileSoporteOpen); setMobileProductosOpen(false); }}
                 className="w-full flex items-center justify-between text-gray-800 font-semibold text-base py-2 px-3 rounded-lg hover:bg-gray-100 hover:text-brand-600 transition-colors">
                 <span>Soporte</span>
                 <svg className={`w-4 h-4 transition-transform duration-200 ${mobileSoporteOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
