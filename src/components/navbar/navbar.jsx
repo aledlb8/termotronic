@@ -34,12 +34,12 @@ export default function App() {
   }, [isMenuOpen]);
 
   return (
-    <div ref={navRef} className="sticky top-0 z-50">
     <Navbar
+      ref={navRef}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="border-b border-gray-300 shadow-soft"
+      className="border-b border-gray-300 sticky top-0 z-50 shadow-soft"
       classNames={{
         base: "bg-gray-200/75 backdrop-blur-lg",
         wrapper: "px-4 sm:px-6 lg:px-8",
@@ -334,6 +334,5 @@ export default function App() {
 
       </NavbarMenu>
     </Navbar>
-    </div>
   );
 }
