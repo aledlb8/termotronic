@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -17,8 +17,24 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleClick = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    const id = setTimeout(() => document.addEventListener("pointerdown", handleClick), 10);
+    return () => {
+      clearTimeout(id);
+      document.removeEventListener("pointerdown", handleClick);
+    };
+  }, [isMenuOpen]);
 
   return (
+    <div ref={navRef}>
     <Navbar
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
@@ -316,5 +332,6 @@ export default function App() {
 
       </NavbarMenu>
     </Navbar>
+    </div>
   );
 }
