@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Accordion, AccordionItem, Input } from "@nextui-org/react";
+import { Accordion, AccordionItem, Input } from "@heroui/react";
 
 export default function FAQ() {
   const [searchTerm, setSearchTerm] = useState("");

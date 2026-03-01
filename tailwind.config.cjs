@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
-const { nextui } = require("@nextui-org/react");
+const { heroui } = require("@heroui/react");
 
 
 module.exports = {
   safelist: [
     'text-green-300', 'text-blue-300', 'text-gray-300', 'text-cyan-300', 'text-red-300', 'text-yellow-300'
   ],
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}", "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
-  plugins: [require("@tailwindcss/typography"), /*require('daisyui'),*/ nextui()],
+  plugins: [require("@tailwindcss/typography"), /*require('daisyui'),*/ heroui()],
   theme: {
     extend: {
       fontFamily: {
