@@ -99,7 +99,7 @@ export default function App() {
           <DropdownMenu
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
-            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl"
+            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             itemClasses={{
               base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
@@ -169,7 +169,7 @@ export default function App() {
           <DropdownMenu
             onMouseEnter={() => setIsDropdownOpen2(true)}
             onMouseLeave={() => setIsDropdownOpen2(false)}
-            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl"
+            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             itemClasses={{
               base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
@@ -220,7 +220,7 @@ export default function App() {
             </DropdownTrigger>
           </NavbarMenuItem>
           <DropdownMenu
-            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl"
+            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             itemClasses={{
               base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
@@ -276,7 +276,7 @@ export default function App() {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
-            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl"
+            className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             itemClasses={{
               base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
