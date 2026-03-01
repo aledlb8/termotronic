@@ -102,7 +102,7 @@ export default function App() {
             className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             classNames={{ list: "outline-none focus:outline-none" }}
             itemClasses={{
-              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
+              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0 data-[hover=true]:bg-gray-100 rounded-lg transition-colors duration-200",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
               description: "text-gray-400 font-normal text-xs",
             }}>
@@ -173,7 +173,7 @@ export default function App() {
             className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             classNames={{ list: "outline-none focus:outline-none" }}
             itemClasses={{
-              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
+              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0 data-[hover=true]:bg-gray-100 rounded-lg transition-colors duration-200",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
               description: "text-gray-400 font-normal text-xs",
             }}>
@@ -225,7 +225,7 @@ export default function App() {
             className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             classNames={{ list: "outline-none focus:outline-none" }}
             itemClasses={{
-              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
+              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0 data-[hover=true]:bg-gray-100 rounded-lg transition-colors duration-200",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
               description: "text-gray-400 font-normal text-xs",
             }}>
@@ -282,7 +282,7 @@ export default function App() {
             className="w-[340px] bg-white shadow-lg border border-gray-200 rounded-xl outline-none focus:outline-none"
             classNames={{ list: "outline-none focus:outline-none" }}
             itemClasses={{
-              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0",
+              base: "gap-4 py-2 border-b border-gray-100 last:border-0 outline-none focus:outline-none data-[focus-visible=true]:outline-none data-[focus-visible=true]:ring-0 data-[hover=true]:bg-gray-100 rounded-lg transition-colors duration-200",
               title: "text-gray-900 font-bold mb-0.5 group-hover:text-brand-600 transition-colors duration-200",
               description: "text-gray-400 font-normal text-xs",
             }}>
