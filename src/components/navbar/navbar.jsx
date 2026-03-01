@@ -54,7 +54,7 @@ export default function App() {
         maxWidth="full"
         className="border-b border-gray-300 sticky top-0 z-50 shadow-soft"
         classNames={{
-          base: "bg-gray-200/75 backdrop-blur-lg",
+          base: "bg-gray-200/75 [-webkit-backdrop-filter:blur(16px)] [backdrop-filter:blur(16px)] [transform:translateZ(0)]",
           wrapper: "px-4 sm:px-6 lg:px-8",
           brand: "gap-3",
           item: "data-[active=true]:text-brand-600",
